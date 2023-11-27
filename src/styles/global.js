@@ -8,7 +8,26 @@ export default createGlobalStyle`
 
     }
 
+    :root {
+        font-size: 62,5%;
+    }
+
     body {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_400}
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_400};
+
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+
+    button, a {
+        cursor: pointer;
+        transition: filter 0.2s;
+    }
+
+    button:hover, a:hover {
+       filter: brightness(0.9);
     }
 `;
