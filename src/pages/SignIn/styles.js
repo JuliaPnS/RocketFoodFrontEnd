@@ -10,7 +10,6 @@ export const Container = styled.div`
 
 export const Form = styled.form`
     padding: 0 13.6rem;
-    margin: auto;
 
     display: flex;
     flex-direction: column;
@@ -30,7 +29,7 @@ export const Form = styled.form`
 
    > label {
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
-        font-family: Roboto, sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-weight: 400;
 
         margin-bottom: .5rem;
@@ -41,7 +40,7 @@ export const Form = styled.form`
 
     > a {
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_100};
-        font-family: Poppins, sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 500;
         font-size: .87rem;
         line-height: 1.5rem;

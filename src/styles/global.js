@@ -17,6 +17,11 @@ export default createGlobalStyle`
 
         -webkit-font-smoothing: antialiased;
     }
+
+    body, input, button {
+        outline: none;
+
+    }
     
     a {
         text-decoration: none;

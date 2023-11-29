@@ -15,6 +15,7 @@ export default {
         COLOR_LIGHT_WHITE_300: "#E1E1E6",
         COLOR_LIGHT_WHITE_400: "#C4C4CC",
         COLOR_LIGHT_WHITE_500: "#7C7C8A",
+        COLOR_LIGHT_WHITE_700: "#4D585E",
 
         COLOR_LIGHT_CAKE_200: "#82F3FF",
 
