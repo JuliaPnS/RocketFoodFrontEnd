@@ -5,14 +5,14 @@ import { ThemeProvider } from 'styled-components';
 
 import theme from './styles/theme';
 import GlobalStyles from './styles/global';
-import { MenuUser } from './pages/MenuUser';
+import { SignUp } from './pages/SignUp';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme = {theme}>
       <GlobalStyles />
-      <MenuUser />
+      <SignUp />
     </ThemeProvider>
   </React.StrictMode>
 )
