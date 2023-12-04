@@ -17,6 +17,8 @@ export const Form = styled.form`
 
     text-align: center;
 
+    margin: auto;
+
     > h1 {
         display: flex;
         align-items: center;

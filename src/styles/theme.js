@@ -7,7 +7,7 @@ export default {
         BACKGROUND_DARK_900: "#0D1D25",
         BACKGROUND_DARK_1000: "#192227",
 
-        BACKGROUND_GRADIENT_200: "#091E26",
+        BACKGROUND_BLACK_200: "#00070A",
 
         
         COLOR_LIGHT_WHITE_100: "#FFFFFF",
