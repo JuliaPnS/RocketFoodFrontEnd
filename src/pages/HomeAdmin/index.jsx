@@ -1,19 +1,19 @@
-import { PiHeart } from 'react-icons/pi';
+import { PiPencilSimpleLight  } from 'react-icons/pi';
 
 
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
-import { HeaderUser } from '../../components/HeaderUser';
+import { HeaderAdmin } from '../../components/HeaderAdmin';
 import { Section } from '../../components/Section';
 import { Plates } from '../../components/Plates';
 
 import Image from '../../assets/imgsubheader.png';
 
 
-export function HomeUser() {
+export function HomeAdmin() {
     return(
         <Container>
-            <HeaderUser />
+            <HeaderAdmin />
 
                     <div className='subHeader'>
                         <img src={Image} alt="teste" />
@@ -28,7 +28,7 @@ export function HomeUser() {
 
             <Section title='Refeições'>
                 <Plates
-                    icon={PiHeart}
+                    icon={PiPencilSimpleLight }
                     
                     data={{
                         title: 'Salada Ravanello >',
@@ -38,7 +38,7 @@ export function HomeUser() {
                 />
 
                  <Plates
-                    icon={PiHeart}
+                    icon={PiPencilSimpleLight }
                     
                     data={{
                         title: 'Spaguetti Gambe >',
@@ -48,7 +48,7 @@ export function HomeUser() {
                 />
 
                 <Plates
-                    icon={PiHeart}
+                    icon={PiPencilSimpleLight}
                     
                     data={{
                         title: 'Spaguetti Gambe >',
@@ -61,7 +61,7 @@ export function HomeUser() {
 
             <Section title='Pratos Principais'>
                 <Plates
-                    icon={PiHeart}
+                    icon={PiPencilSimpleLight}
                     
                     data={{
                         title: 'Prugna Pie >',

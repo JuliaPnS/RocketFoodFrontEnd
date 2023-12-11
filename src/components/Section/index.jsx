@@ -4,7 +4,9 @@ export function Section({title, children}) {
     return (
         <Container>
             <h2>{title}</h2>
-            {children}
+            <div className='children'>
+                {children}
+            </div>
         </Container>
 
     )

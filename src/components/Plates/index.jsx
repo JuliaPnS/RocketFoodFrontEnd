@@ -1,20 +1,23 @@
 import { PiHeart, PiPlus, PiMinus} from 'react-icons/pi';
 
+import isPropValid from '@emotion/is-prop-valid';
+import { StyleSheetManager } from 'styled-components';
+
 import { Container } from './styles';
 import { Button } from '../../components/Button';
 
 
-export function Plates({data}) {
+export function Plates({icon:Icon, data, ...rest}) {
     return (
-        <Container >
+        <Container {...rest}>
 
-            <PiHeart />
+            {Icon && <Icon />}
 
                 <h3>{data.title}</h3>
                 <p>{data.price}</p>
                 
-                <div className='input'>
-                    <PiMinus />
+                <div className="input">
+                    <PiMinus /> 
                     <input
                         type='number'
                         placeholder='01'
@@ -27,3 +30,4 @@ export function Plates({data}) {
         </Container>
     )
 }
+

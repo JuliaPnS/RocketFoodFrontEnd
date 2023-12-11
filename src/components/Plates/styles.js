@@ -42,6 +42,9 @@ export const Container = styled.div`
         right: 1rem;
         top: 1rem;
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
 

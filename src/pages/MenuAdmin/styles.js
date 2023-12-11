@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+       
 
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_100};
+        
 
         > .header {
             display: flex;
@@ -17,6 +19,8 @@ export const Container = styled.div`
             margin: auto 0;
             
             margin-bottom: 2.25rem;
+
+            
 
             h1 {
                 font-family: 'Roboto', sans-serif;
@@ -46,7 +50,7 @@ export const Container = styled.div`
 
                 padding: 0.62rem ;
 
-                border-bottom: 1px solid #192227;                
+                border-bottom: 1px solid #192227;
             }
 
         }

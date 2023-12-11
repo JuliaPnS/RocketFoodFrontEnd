@@ -5,14 +5,14 @@ import { ThemeProvider } from 'styled-components';
 
 import theme from './styles/theme';
 import GlobalStyles from './styles/global';
-import { HomeUser } from './pages/HomeUser';
+import { NewPlate } from './pages/NewPlate';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme = {theme}>
       <GlobalStyles />
-      <HomeUser />
+      <NewPlate />
     </ThemeProvider>
   </React.StrictMode>
 )

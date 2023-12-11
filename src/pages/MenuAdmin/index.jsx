@@ -4,7 +4,7 @@ import { Container } from './styles';
 import { Input } from '../../components/Input';
 import { Footer } from '../../components/Footer'
 
-export function MenuUser() {
+export function MenuAdmin() {
     return (
         <Container>
             <div className="header">
@@ -18,6 +18,7 @@ export function MenuUser() {
                 type='text'
                 icon={PiMagnifyingGlassLight}
                 />
+                <h2>Novo Prato</h2>
                 <h2>Sair</h2>
             </div>
 

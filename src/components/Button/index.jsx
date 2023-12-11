@@ -1,9 +1,14 @@
 import { Container } from './styles';
 
-export function Button({ title }) {
+export function Button({icon:Icon, data, title, ...rest }) {
     return (
-    <Container type='button'>
-        {title}
-    </Container>
+   
+        <Container type='button'  {...rest}>
+            {Icon && <Icon />}
+            {title}
+            {data && data.price}
+                  
+        </Container>
     );
 }
+

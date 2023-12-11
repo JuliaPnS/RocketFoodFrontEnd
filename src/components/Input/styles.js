@@ -24,7 +24,9 @@ export const Container = styled.div`
         
         &:placeholder {
             color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_500};
-        }     
+        }    
+        
+  
     }
 
     > svg {

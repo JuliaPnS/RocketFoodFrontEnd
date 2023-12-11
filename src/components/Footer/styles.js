@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+
+    position: relative;
+    bottom: 0;
+    
     width: 100%;
     height: 4.8rem;
 
@@ -9,12 +13,9 @@ export const Container = styled.div`
 
     padding: 1.83rem 1.74rem;
 
-
-
-    bottom: 0;
-    position: absolute;
-
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_700};
+
+   
 
     h2 {
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_700};
@@ -30,4 +31,13 @@ export const Container = styled.div`
         font-size: 0.75rem;
     }
 
+
+    > svg {
+        path {
+        fill: #4D585E;
+        }
+        
+        width: 1.37rem;
+        height: 1.7rem;
+    }
 `;
