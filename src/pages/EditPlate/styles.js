@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-       
-    color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_100};
     font-family: 'Poppins', sans-serif;
+    color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_100};
 
     .frame {
         margin: 0.68rem 2rem 3.32rem;
@@ -13,6 +12,7 @@ export const Container = styled.div`
         font-size: 1.5rem;
         line-height: 140%;
 
+
         display: flex;
         align-items: center;
 
@@ -20,10 +20,11 @@ export const Container = styled.div`
             width: 2rem;
             height: 2rem;
 
-        }
-    }   
+        }   
+    }
 
         h1 {
+            
             font-size: 2rem;
             font-weight: 500; 
         }
@@ -46,7 +47,7 @@ export const Container = styled.div`
             margin-bottom: 1.5rem;
         }
 
-        > .image {
+    > .image {
             background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_900};
 
             margin-bottom: 2rem;
@@ -74,10 +75,6 @@ export const Container = styled.div`
                 display: none;
                 width: 100%;
                 }
-            }
-
-            a {
-                font-size: 0.87rem;
             }
         
 
@@ -117,6 +114,14 @@ export const Container = styled.div`
         }
     }
 
-        
+    > .buttons {
+        display: flex;
+        gap: 2rem;
+    }
+
+    > .buttons .delete {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_800}; ;
+    }
+
 }
 `;

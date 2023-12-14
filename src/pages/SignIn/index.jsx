@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import { Container, Form } from './styles';
-import { Button } from '../../components/Button';
+import { Button } from '../../components/ButtonBig';
 import { Input } from '../../components/Input';
 
 import Logo from '../../assets/logofill.svg';
@@ -28,9 +29,9 @@ export function SignIn() {
                     />
                 <Button title='Entrar'/>
 
-                <a href='#'>Criar uma Conta</a>
+                <Link to='/register'>Criar uma Conta</Link >
             </Form>
 
         </Container>
     )
-};
+}Link 

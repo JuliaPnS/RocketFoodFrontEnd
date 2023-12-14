@@ -23,6 +23,11 @@ export const Container = styled.div`
         height: 2.5rem;
     }
 
+    a:hover {
+        transition: 0.2s;
+        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+    }
+
     h1 {
         font-weight: 700;
         font-family: 'Roboto', sans-serif;

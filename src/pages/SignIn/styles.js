@@ -48,8 +48,8 @@ export const Form = styled.form`
         line-height: 1.5rem;
 
         margin-top: 2rem;
-
-
     }
+
+
 
 `;

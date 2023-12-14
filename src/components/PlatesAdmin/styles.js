@@ -36,7 +36,7 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_CAKE_200};
     }
 
-    > svg {
+    > a {
         position: absolute;
 
         right: 1rem;
@@ -45,8 +45,8 @@ export const Container = styled.div`
 
         width: 1.5rem;
         height: 1.5rem;
-    }
 
+    }
 
     > .input {
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
@@ -73,23 +73,6 @@ export const Container = styled.div`
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
-    }
-
-
-    > button {
-        height: 2rem;
-        width: 10.125rem;
-
-        border-radius: 0.3125rem;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.875rem;
-        font-weight: 500;
-
     }
 
 

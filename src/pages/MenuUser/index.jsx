@@ -1,6 +1,7 @@
 import { PiMagnifyingGlassLight, PiX } from "react-icons/pi";
-import { Container } from './styles';
+import { Link } from 'react-router-dom';
 
+import { Container } from './styles';
 import { Input } from '../../components/Input';
 import { Footer } from '../../components/Footer'
 
@@ -8,7 +9,7 @@ export function MenuUser() {
     return (
         <Container>
             <div className="header">
-                <PiX />
+                <Link to='/'><PiX /></Link>
                 <h1>Menu</h1>
             </div>
 
@@ -18,7 +19,7 @@ export function MenuUser() {
                 type='text'
                 icon={PiMagnifyingGlassLight}
                 />
-                <h2>Sair</h2>
+                <Link to='/'><h2>Sair</h2></Link>
             </div>
 
             <Footer />

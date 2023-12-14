@@ -13,30 +13,30 @@ import { IngredientsTag } from '../../components/IngredientsTag';
 
 
 
-export function NewPlate() {
+export function EditPlate() {
     return (
         <Container>
             <HeaderAdmin />
 
             <div className="frame">
-                <Link to='admin'><p><IoIosArrowBack />voltar</p></Link>
-                    <h1>Novo prato</h1>
+                <Link to='/admin'><p><IoIosArrowBack />voltar</p></Link>
+                    <h1>Editar Prato</h1>
 
-                    <label htmlFor="image">Imagem do Prato</label>
+                    <label for="image">Imagem do Prato</label>
                     <div className="image">
                         <PiUploadSimple />
                         <input type="file" id="image" placeholder="Selecione Imagem"></input>
-                        <p>Selecione Imagem</p>
+                        <p>Selecione uma imagem para alterá-la</p>
                     </div>
                 
-                <label htmlFor="name">Nome</label>
+                <label for="name">Nome</label>
                     <Input
                         id='name'
                         placeholder='Ex: Salada Ceasar'
                         type='text'
                     />
 
-                    <label htmlFor="category">Categoria</label>
+                    <label for="category">Categoria</label>
                     <div className="category">
                         <select name="category" id="category" placeholder="Selecione a Categoria" >
                                 <option value="paonaan">Refeição</option>
@@ -47,20 +47,23 @@ export function NewPlate() {
                
                    <IngredientsTag title="teste" icon={PiX}/>
 
-                <label htmlFor="price">Preço</label>
+                <label for="price">Preço</label>
                     <Input
                         id='price'
                         placeholder='R$0,00'
                         type='text'
                     />
 
-                <label htmlFor="description">Descrição</label>
+                <label for="description">Descrição</label>
                     <TextArea
                         id='description'
                         placeholder='Fale brevemente sobre o prato, seus ingredientes e composição'
                     />
-                    
-               <Button to='/admin'title='Salvar Alterações' ></Button>
+                
+                <div className="buttons">
+                    <Button to='/admin' className='delete' title='Excluir Prato' ></Button>    
+                    <Button to='/admin' title='Salvar Alterações' ></Button>
+                </div>
 
                
             </div>

@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 import { HeaderAdmin } from '../../components/HeaderAdmin';
 import { Footer } from '../../components/Footer';
-import { Button } from '../../components/Button';
+import { Button } from '../../components/ButtonBig';
 import { IngredientsInfos } from '../../components/IngredientsInfos';
 
 export function PlateInfosAdmin() {

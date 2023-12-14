@@ -1,11 +1,15 @@
 import { Container } from './styles';
 import {PiListLight  } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
+
+
 
 export function HeaderAdmin() {
     return(
         <Container>
-            <PiListLight />
-            
+            <Link to='/menuadmin'>
+                <PiListLight />
+            </Link>
             <h1>
             <svg
                 width="39" 

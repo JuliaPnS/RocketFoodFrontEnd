@@ -1,17 +1,16 @@
-import { PiHeart, PiPlus, PiMinus} from 'react-icons/pi';
+import { PiPlus, PiMinus, PiPencilSimpleLight} from 'react-icons/pi';
+import { Link } from 'react-router-dom';
 
-import isPropValid from '@emotion/is-prop-valid';
-import { StyleSheetManager } from 'styled-components';
 
 import { Container } from './styles';
-import { Button } from '../../components/Button';
 
 
-export function Plates({icon:Icon, data, ...rest}) {
+
+export function PlatesAdmin({data, ...rest}) {
     return (
         <Container {...rest}>
 
-            {Icon && <Icon />}
+            <Link to='/edit/:id'><PiPencilSimpleLight /></Link>
 
                 <h3>{data.title}</h3>
                 <p>{data.price}</p>
@@ -25,7 +24,6 @@ export function Plates({icon:Icon, data, ...rest}) {
 
                     <PiPlus/>
                 </div>
-            <Button title='incluir' />
 
         </Container>
     )

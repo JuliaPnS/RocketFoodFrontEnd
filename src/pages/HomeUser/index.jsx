@@ -1,11 +1,10 @@
 import { PiHeart } from 'react-icons/pi';
 
-
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
 import { HeaderUser } from '../../components/HeaderUser';
 import { Section } from '../../components/Section';
-import { Plates } from '../../components/Plates';
+import { PlatesUser } from '../../components/PlatesUser';
 
 import Image from '../../assets/imgsubheader.png';
 
@@ -27,7 +26,7 @@ export function HomeUser() {
 
 
             <Section title='Refeições'>
-                <Plates
+                <PlatesUser
                     icon={PiHeart}
                     
                     data={{
@@ -37,7 +36,7 @@ export function HomeUser() {
                     }}
                 />
 
-                 <Plates
+                 <PlatesUser
                     icon={PiHeart}
                     
                     data={{
@@ -47,7 +46,7 @@ export function HomeUser() {
                     }}
                 />
 
-                <Plates
+                <PlatesUser
                     icon={PiHeart}
                     
                     data={{
@@ -60,7 +59,7 @@ export function HomeUser() {
             </Section>
 
             <Section title='Pratos Principais'>
-                <Plates
+                <PlatesUser
                     icon={PiHeart}
                     
                     data={{

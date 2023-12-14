@@ -1,11 +1,11 @@
 import { PiPencilSimpleLight  } from 'react-icons/pi';
-
+import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
 import { HeaderAdmin } from '../../components/HeaderAdmin';
 import { Section } from '../../components/Section';
-import { Plates } from '../../components/Plates';
+import { PlatesAdmin } from '../../components/PlatesAdmin';
 
 import Image from '../../assets/imgsubheader.png';
 
@@ -27,42 +27,35 @@ export function HomeAdmin() {
 
 
             <Section title='Refeições'>
-                <Plates
-                    icon={PiPencilSimpleLight }
-                    
-                    data={{
-                        title: 'Salada Ravanello >',
-                        price: 'R$ 49,97'
-    
-                    }}
-                />
+                <Link to='/edit/:id'>
+                    <PlatesAdmin
+                        data={{
+                            title: 'Salada Ravanello >',
+                            price: 'R$ 49,97'
+        
+                        }}
+                    /></Link>
 
-                 <Plates
-                    icon={PiPencilSimpleLight }
-                    
-                    data={{
-                        title: 'Spaguetti Gambe >',
-                        price: 'R$ 79,97'
-    
-                    }}
-                />
+                    <PlatesAdmin
+                         data={{
+                            title: 'Spaguetti Gambe >',
+                            price: 'R$ 79,97'
+        
+                        }}
+                    />
 
-                <Plates
-                    icon={PiPencilSimpleLight}
-                    
-                    data={{
-                        title: 'Spaguetti Gambe >',
-                        price: 'R$ 79,97'
-    
-                    }}
-                />
+                    <PlatesAdmin
+                        data={{
+                            title: 'Spaguetti Gambe >',
+                            price: 'R$ 79,97'
+        
+                        }}
+                    />
 
             </Section>
 
             <Section title='Pratos Principais'>
-                <Plates
-                    icon={PiPencilSimpleLight}
-                    
+                <PlatesAdmin
                     data={{
                         title: 'Prugna Pie >',
                         price: 'R$ 79,97'

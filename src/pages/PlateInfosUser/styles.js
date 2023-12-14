@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-       
     
    > .plateInfos {
+      
 
         width: 19.75rem;
 
@@ -11,21 +11,24 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
         
         margin: 1rem 3.5rem 2.1rem;
-    p {    
-        
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 140%;
 
-        display: flex;
-        align-items: center;
+        > a {    
+            
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 140%;
 
-        svg {
-            width: 2rem;
-            height: 2rem;
+            display: flex;
+            align-items: center;
+
+            color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+            
         }
-        
-    }
 
     > section {
 
@@ -69,9 +72,7 @@ export const Container = styled.div`
         font-weight: 500;
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+       
 
         svg {
             width: 1.39rem;

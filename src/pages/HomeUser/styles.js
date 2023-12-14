@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
        > .subHeader {
             color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
@@ -9,9 +10,11 @@ export const Container = styled.div`
             border-radius: 0.18231rem;
 
             margin: 2.75rem 1rem 0 1.87rem;
- 
-
-            section {
+            
+       }  
+       
+       
+       section {
                 display: flex;
                 flex-direction: column;
                 
@@ -28,5 +31,4 @@ export const Container = styled.div`
                 }
 
             }
-       }      
 `;

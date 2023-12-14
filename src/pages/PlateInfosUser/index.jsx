@@ -1,11 +1,13 @@
 import { IoIosArrowBack } from 'react-icons/io';
 import { PiPlus, PiMinus, PiReceiptLight } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
+
 
 import { Container } from './styles';
 
 import { HeaderUser } from '../../components/HeaderUser';
 import { Footer } from '../../components/Footer';
-import { Button } from '../../components/Button';
+import { Button } from '../../components/ButtonBig';
 import { IngredientsInfos } from '../../components/IngredientsInfos';
 
 export function PlateInfosUser() {
@@ -13,7 +15,7 @@ export function PlateInfosUser() {
         <Container>
             <HeaderUser />
             <div className='plateInfos'>
-                <p><IoIosArrowBack />voltar</p>
+                <Link to='/'><IoIosArrowBack />voltar</Link>
 
                 {/*imagem*/}
 
@@ -52,10 +54,8 @@ export function PlateInfosUser() {
                        
                     />
                 </div>
-            
+                
             </div>
-            
-
             <Footer />
 
         </Container>
