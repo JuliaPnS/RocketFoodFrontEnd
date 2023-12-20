@@ -6,12 +6,12 @@ import { Container } from './styles';
 
 
 
-export function PlatesAdmin({data, ...rest}) {
+export function PlatesAdmin({data, image, ...rest}) {
     return (
         <Container {...rest}>
 
-            <Link to='/edit/:id'><PiPencilSimpleLight /></Link>
-
+            <Link to='/platesadmin/:id'><PiPencilSimpleLight /></Link>
+                    <img src={image} alt="Imagem do prato" />
                 <h3>{data.title}</h3>
                 <p>{data.price}</p>
                 

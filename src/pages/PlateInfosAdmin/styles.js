@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div` 
-   > .plateInfos {
 
+   > .plateInfos {
         height: 100vh;
         width: 19.75rem;
 
@@ -10,19 +10,20 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
         
         margin: 1rem 3.5rem 2.1rem;
-    p {    
+
+        a {    
         
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 140%;
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 140%;
 
-        display: flex;
-        align-items: center;
+            display: flex;
+            align-items: center;
 
-        svg {
-            width: 2rem;
-            height: 2rem;
-        }
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
         
     }
 
@@ -59,7 +60,7 @@ export const Container = styled.div`
     
 }
     
-    button {
+.edit {
         width: 100%;
         height: 3rem;
         

@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    
-   > .plateInfos {
-      
 
+   > .plateInfos {
         width: 19.75rem;
 
         font-family: 'Poppins', sans-serif;
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
         
         margin: 1rem 3.5rem 2.1rem;
+
+        img {
+            width: 16.5rem;
+            height: 16.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
         > a {    
             

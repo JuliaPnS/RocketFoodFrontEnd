@@ -5,12 +5,13 @@ import { Container } from './styles';
 import { ButtonMin } from '../ButtonMin';
 
 
-export function PlatesUser({icon:Icon, data, ...rest}) {
+export function PlatesUser({icon:Icon, image, data, ...rest}) {
     return (
         <Container {...rest}>
 
             {Icon && <Icon />}
 
+                <img src={image} alt="Imagem do prato" />
                 <h3>{data.title}</h3>
                 <p>{data.price}</p>
                 

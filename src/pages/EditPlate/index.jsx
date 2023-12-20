@@ -19,7 +19,7 @@ export function EditPlate() {
             <HeaderAdmin />
 
             <div className="frame">
-                <Link to='/admin'><p><IoIosArrowBack />voltar</p></Link>
+                <Link to='/platesadmin/:id'><p><IoIosArrowBack />voltar</p></Link>
                     <h1>Editar Prato</h1>
 
                     <label for="image">Imagem do Prato</label>

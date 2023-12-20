@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
-    position: relative;
-    bottom: 0;
+    bottom: -0;
     
     width: 100%;
     height: 4.8rem;
@@ -12,10 +10,9 @@ export const Container = styled.div`
     align-items: center;
 
     padding: 1.83rem 1.74rem;
+    margin-top: 1.5rem;
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_700};
-
-   
 
     h2 {
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_700};

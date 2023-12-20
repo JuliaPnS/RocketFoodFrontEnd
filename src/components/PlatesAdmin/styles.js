@@ -19,6 +19,13 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 0.75rem ;
+    
+    img {
+        width: 5.5rem;
+        height: 5.5rem;
+
+        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+    }
 
     h3 {
         font-family: 'Poppins', sans-serif;

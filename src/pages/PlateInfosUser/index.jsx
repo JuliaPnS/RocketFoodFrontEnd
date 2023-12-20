@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 
 import { Container } from './styles';
-
 import { HeaderUser } from '../../components/HeaderUser';
 import { Footer } from '../../components/Footer';
 import { Button } from '../../components/ButtonBig';
 import { IngredientsInfos } from '../../components/IngredientsInfos';
+
+import Image from '../../assets/plates/image1.png';
+
 
 export function PlateInfosUser() {
     return (
@@ -17,7 +19,7 @@ export function PlateInfosUser() {
             <div className='plateInfos'>
                 <Link to='/'><IoIosArrowBack />voltar</Link>
 
-                {/*imagem*/}
+                <img src={Image} alt="Imagem do prato" />
 
                 <section>
                     <h1>Salada Ravanello</h1>

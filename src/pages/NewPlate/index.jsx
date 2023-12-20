@@ -19,7 +19,7 @@ export function NewPlate() {
             <HeaderAdmin />
 
             <div className="frame">
-                <Link to='admin'><p><IoIosArrowBack />voltar</p></Link>
+                <Link to='/admin'><p><IoIosArrowBack />voltar</p></Link>
                     <h1>Novo prato</h1>
 
                     <label htmlFor="image">Imagem do Prato</label>

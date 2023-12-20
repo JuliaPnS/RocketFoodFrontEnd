@@ -1,6 +1,7 @@
 import { IoIosArrowBack } from 'react-icons/io';
-import { Container } from './styles';
+import { Link } from 'react-router-dom';
 
+import { Container } from './styles';
 import { HeaderAdmin } from '../../components/HeaderAdmin';
 import { Footer } from '../../components/Footer';
 import { Button } from '../../components/ButtonBig';
@@ -11,7 +12,7 @@ export function PlateInfosAdmin() {
         <Container>
             <HeaderAdmin />
             <div className='plateInfos'>
-                <p><IoIosArrowBack />voltar</p>
+                <Link to='/admin'><IoIosArrowBack />voltar</Link>
 
                 {/*imagem*/}
 
@@ -33,7 +34,7 @@ export function PlateInfosAdmin() {
                 </section>
 
                                
-            <Button title='Editar Prato' />
+            <Button to='/edit/:id' title='Editar Prato' className='edit' />
            
             </div>
             

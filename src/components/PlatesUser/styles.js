@@ -20,6 +20,13 @@ export const Container = styled.div`
     align-items: center;
     gap: 0.75rem ;
 
+    img {
+        width: 5.5rem;
+        height: 5.5rem;
+
+        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+    }
+
     h3 {
         font-family: 'Poppins', sans-serif;
         font-size: 0.875rem;
