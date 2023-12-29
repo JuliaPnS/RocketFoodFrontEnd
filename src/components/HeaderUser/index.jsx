@@ -10,7 +10,6 @@ export function HeaderUser() {
                 <PiListLight />
             </Link>
             <h1>
-                
                     <svg
                         width="39" 
                         height="44" 
