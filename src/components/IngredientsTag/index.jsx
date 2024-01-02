@@ -1,10 +1,27 @@
 import { Container } from './styles'
+import { PiX, PiPlus } from "react-icons/pi";
 
-export function IngredientsTag({ icon:Icon, add = false, title, ...rest}) {
+export function IngredientsTag({ $isNew, value, onClick, ...rest }) {
     return (
-        <Container {...rest}>
-            {title}
-            {Icon && <Icon/>}
+        <Container $isNew={$isNew}>
+            <input
+                type="text"
+                value={value}
+                readOnly={!$isNew}
+                {...rest}
+            />
+
+            <button
+                type="button"
+                onClick={onClick} 
+                className={$isNew ? 'button-add' : 'button-delete'}
+                >
+                
+
+                {$isNew ? <PiPlus /> : <PiX />}
+
+            </button>
+
         </Container>
     )
 }
