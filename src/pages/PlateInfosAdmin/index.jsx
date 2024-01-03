@@ -8,6 +8,7 @@ import { Button } from '../../components/ButtonBig';
 import { IngredientsInfos } from '../../components/IngredientsInfos';
 
 export function PlateInfosAdmin() {
+    
     return (
         <Container>
             <HeaderAdmin />

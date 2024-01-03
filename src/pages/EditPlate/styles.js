@@ -114,6 +114,29 @@ export const Container = styled.div`
         }
     }
 
+    > .ingredients {
+        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
+        font-family: 'Roboto', sans-serif;
+   
+        .tagsIngredients {
+            width: 100%;
+            height: 3rem;
+
+            margin-top: .5rem;
+
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_900};
+            border-radius: .5rem;
+
+            padding: 1.4rem 3.2rem 1.4rem 1.4rem;
+
+            
+        }
+    }
+
     > .buttons {
         display: flex;
         gap: 2rem;

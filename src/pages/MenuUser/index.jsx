@@ -2,6 +2,8 @@ import { PiMagnifyingGlassLight, PiX } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+import { api } from '../../service/api';
+
 import { Container } from './styles';
 import { Input } from '../../components/Input';
 import { Footer } from '../../components/Footer'
