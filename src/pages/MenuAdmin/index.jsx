@@ -15,35 +15,25 @@ export function MenuAdmin() {
 
     const [search, setSearch] = useState("");
     const [plates, setPlates] = useState([]);
-    const [ingredients, setIngredients] = useState([]);
-
-
-    useEffect(() => {
-        async function fetchIngredients() {
-
-            const response = await api.get(`/ingredients?name=${search}`);
-
-            setIngredients(response.data);
-
-        }
-
-        fetchIngredients()
-
-    }, []);
 
     useEffect(() => {
         async function fetchPlates() {
+            if(search) {
+                const response = await api.get(`/plates?search=${search}`);
 
-            const response = await api.get(`/plates?title=${search}`);
-
-            setPlates(response.data);
-
+                setPlates(response.data)
+    
+            } else {
+                setPlates([])
+            }
+         
         }
 
         fetchPlates()
 
     }, [search]);
     console.log(search)
+
 
     return (
         <Container>
