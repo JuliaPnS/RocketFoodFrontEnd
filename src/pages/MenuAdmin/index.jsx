@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { api } from '../../service/api';
 
 import { PlatesAdmin } from '../../components/PlatesAdmin';
-import { Section } from '../../components/Section';
 import { Container } from './styles';
 import { Input } from '../../components/Input';
 import { Footer } from '../../components/Footer';
