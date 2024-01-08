@@ -7,20 +7,30 @@ import { api } from '../../service/api';
 import { Container } from './styles';
 import { Input } from '../../components/Input';
 import { Footer } from '../../components/Footer'
+import { PlatesUser } from '../../components/PlatesUser'
 
 export function MenuUser() {
 
-    const [search, setSearch] = useState([]);
+    const [search, setSearch] = useState("");
     const [plates, setPlates] = useState([]);
 
     useEffect(() => {
         async function fetchPlates() {
-            const response = await api.get(`/menu?title=${search}`);
-            setPlates(response.data);
+            if (search) {
+                const response = await api.get(`/plates?search=${search}`);
+
+                setPlates(response.data)
+
+            } else {
+                setPlates([])
+            }
+
         }
 
-        fetchPlates();
+        fetchPlates()
+
     }, [search]);
+    console.log(search)
 
     return (
         <Container>
@@ -36,6 +46,15 @@ export function MenuUser() {
                     icon={PiMagnifyingGlassLight}
                     onChange={(e) => setSearch(e.target.value)}
                 />
+                {
+                    plates.map(plate => (
+                        <PlatesUser
+                            key={String(plates.id)}
+                            data={plate}
+                        />
+                    ))
+
+                }
                 <Link to='/'><h2>Sair</h2></Link>
             </div>
 
