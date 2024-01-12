@@ -18,7 +18,7 @@ export const Container = styled.div`
 
     @media (min-width: 425px) {
         svg {
-            margin-right: 5rem;
+            margin-right: 1rem;
             margin-left: 1.75rem;
             width: 2.5rem;
             height: 2.5rem;
@@ -34,8 +34,6 @@ export const Container = styled.div`
         font-weight: 700;
         font-family: 'Roboto', sans-serif;
         font-size: 1.32269rem;
-
-        margin: 0 6rem;
 
         display: flex;
         align-items: center;
@@ -53,14 +51,12 @@ export const Container = styled.div`
         }
     }
 
-  
-
     > .receiptNumber {
 
         position: relative;
 
         svg {
-            margin-left: 5rem;
+            margin-left: 2rem;
             margin-right: 0;
         }
 
@@ -79,11 +75,15 @@ export const Container = styled.div`
             margin-left: -0.6rem;
 
             position: absolute;
+
+            &::placeholder {
+                color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+                font-family: 'Roboto', sans-serif;
+
+            }
         }
 
     }
-
-
 
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -117,10 +117,7 @@ export const Container = styled.div`
             width: 1.53rem;
             height: 1.53rem;
         }
-
-
     }
-
 
     > .receiptNumber {
 
@@ -152,5 +149,5 @@ export const Container = styled.div`
 
 
     }
-
 `;
+

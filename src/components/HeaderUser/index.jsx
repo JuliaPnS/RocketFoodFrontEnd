@@ -25,7 +25,8 @@ export function HeaderUser() {
                 <PiReceiptLight />           
                 <input 
                     disabled
-                    type='number'/>
+                    type='number'
+                    placeholder='0'/>
             </div>
       
         </Container>

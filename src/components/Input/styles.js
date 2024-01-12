@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
 
     border-radius: .5rem;
 
@@ -9,8 +8,6 @@ export const Container = styled.div`
     align-items: center;
     
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_900};
-
-    margin-bottom: 2rem;
 
     > input {
         width: 100%;

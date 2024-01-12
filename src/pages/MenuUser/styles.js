@@ -46,7 +46,8 @@ export const Container = styled.div`
 
                 padding: 0.62rem ;
 
-                border-bottom: 1px solid #192227;                
+                border-bottom: 1px solid #192227;    
+                margin-top: 2rem;
             }
 
         }
