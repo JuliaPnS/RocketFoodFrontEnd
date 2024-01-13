@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
+
 
 import { api } from "../../service/api"
 
@@ -35,43 +37,83 @@ export function SignUp() {
 
     return (
         <Container>
+            <MediaQuery maxWidth={990}>
+                <Form>
+                    <h1>
+                        <img src={Logo} alt="Logo Food Explorer" />
+                        food explorer
+                    </h1>
 
-            <Form>
+
+                    <label for='name'>Seu nome</label>
+                    <Input
+                        id='name'
+                        placeholder='Exemplo: Júlia Linda'
+                        type='text'
+                        onChange={e => setName(e.target.value)}
+                    />
+
+                    <label for='email'>Email</label>
+                    <Input
+                        id='email'
+                        placeholder='Exemplo: exemplo@exemplo.com.br'
+                        type='text'
+                        onChange={e => setEmail(e.target.value)}
+                    />
+
+                    <label for='password'>Senha</label>
+                    <Input
+                        id='password'
+                        placeholder='No mínimo 6 caracteres'
+                        type='password'
+                        onChange={e => setPassword(e.target.value)}
+                    />
+
+
+                    <Button title='Criar Conta' onClick={handleSignUp} />
+
+                    <Link to='/'>Já tenho uma conta</Link>
+                </Form>
+            </MediaQuery>
+
+            <MediaQuery minWidth={1000}>
                 <h1>
                     <img src={Logo} alt="Logo Food Explorer" />
                     food explorer
                 </h1>
+                <Form>
+                    <h2>Crie sua conta</h2>
+                    <label for='name'>Seu nome</label>
+                    <Input
+                        id='name'
+                        placeholder='Exemplo: Júlia Linda'
+                        type='text'
+                        onChange={e => setName(e.target.value)}
+                    />
+
+                    <label for='email'>Email</label>
+                    <Input
+                        id='email'
+                        placeholder='Exemplo: exemplo@exemplo.com.br'
+                        type='text'
+                        onChange={e => setEmail(e.target.value)}
+                    />
+
+                    <label for='password'>Senha</label>
+                    <Input
+                        id='password'
+                        placeholder='No mínimo 6 caracteres'
+                        type='password'
+                        onChange={e => setPassword(e.target.value)}
+                    />
 
 
-                <label for='name'>Seu nome</label>
-                <Input
-                    id='name'
-                    placeholder='Exemplo: Júlia Linda'
-                    type='text'
-                    onChange={e => setName(e.target.value)}
-                />
+                    <Button title='Criar Conta' onClick={handleSignUp} />
 
-                <label for='email'>Email</label>
-                <Input
-                    id='email'
-                    placeholder='Exemplo: exemplo@exemplo.com.br'
-                    type='text'
-                    onChange={e => setEmail(e.target.value)}
-                />
+                    <Link to='/'>Já tenho uma conta</Link>
+                </Form>
 
-                <label for='password'>Senha</label>
-                <Input
-                    id='password'
-                    placeholder='No mínimo 6 caracteres'
-                    type='password'
-                    onChange={e => setPassword(e.target.value)}
-                />
-
-
-                <Button title='Criar Conta' onClick={handleSignUp} />
-
-                <Link to='/'>Já tenho uma conta</Link>
-            </Form>
+            </MediaQuery>
 
         </Container>
     )
