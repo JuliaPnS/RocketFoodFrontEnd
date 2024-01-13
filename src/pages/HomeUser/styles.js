@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
-       > .subHeaderBig {
+       > .subHeaderDesktop {
             position: relative;
 
             display: flex;
             align-items: center;
+            
 
             width: 100%;
             
@@ -24,6 +25,7 @@ export const Container = styled.div`
 
                 display: flex;
                 flex-direction: column;
+                
                 
                 z-index: -2;
 
@@ -133,14 +135,24 @@ export const Container = styled.div`
         }
 
         @media (min-width: 768px) {
-            > .subHeaderBig {
+            > .subHeaderDesktop {
                 section {
                     margin: 0 7.75rem;
                 }
             }
 
-            .frameBig {
+            .frameDesktop {
                 margin: 0 7.75rem;
+              
+                > .sectionOne {
+                    
+                    .arrow {
+                        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+                        width: 2rem;
+                        height: 2rem;                        
+                         
+                    }
+                }
             }
            
         }

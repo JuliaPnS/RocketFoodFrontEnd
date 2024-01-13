@@ -1,4 +1,6 @@
 import { PiHeart } from 'react-icons/pi';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+
 
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
@@ -15,8 +17,11 @@ import ImagePrugna from '../../assets/plates/image3.png';
 import ImagePeachy from '../../assets/plates/image4.png';
 import ImageEspresso from '../../assets/plates/image5.png';
 import ImageJuice from '../../assets/plates/image6.png';
+import ImageToast from '../../assets/plates/image7.png';
+import ImageMacarons from '../../assets/plates/image8.png';
+import ImageTea from '../../assets/plates/image9.png';
 
-import MediaQuery, { useMediaQuery } from 'react-responsive'
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 
 export function HomeUser() {
@@ -24,7 +29,7 @@ export function HomeUser() {
         <Container>
             <MediaQuery minWidth={750}>
                 <HeaderUserDesktop />
-                <div className='subHeaderBig'>
+                <div className='subHeaderDesktop'>
                     <img src={ImageBig} alt="Imagem macarons" />
 
                     <section>
@@ -32,40 +37,44 @@ export function HomeUser() {
                         <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                     </section>
                 </div>
-                <div className="frameBig">
-                    <Section title='Refeições'>
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageSalad}
+                <div className="frameDesktop">
+                    <div className="sectionOne">
+                        <Section title='Refeições'>
+                            <IoIosArrowBack className='arrow'/>
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageSalad}
 
-                            data={{
-                                title: 'Salada Ravanello >',
-                                price: 'R$ 49,97'
-                            }}
-                        />
+                                data={{
+                                    title: 'Salada Ravanello >',
+                                    price: 'R$ 49,97'
+                                }}
+                            />
 
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageSpaguetti}
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageSpaguetti}
 
-                            data={{
-                                title: 'Spaguetti Gambe >',
-                                price: 'R$ 79,97'
+                                data={{
+                                    title: 'Spaguetti Gambe >',
+                                    price: 'R$ 79,97'
 
-                            }}
-                        />
+                                }}
+                            />
 
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageSpaguetti}
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageToast}
 
-                            data={{
-                                title: 'Torradas de Parma >',
-                                price: 'R$ 79,97'
+                                data={{
+                                    title: 'Torradas de Parma >',
+                                    price: 'R$ 25,97'
 
-                            }}
-                        />
-                    </Section>
+                                }}
+                            />
+                            <IoIosArrowForward className='arrow' />
+                        </Section>
+                    </div>
 
                     <Section title='Pratos Principais'>
                         <PlatesUser
@@ -84,6 +93,16 @@ export function HomeUser() {
                             data={{
                                 title: 'Peachy Pastrie >',
                                 price: 'R$ 32,97'
+
+                            }}
+                        />
+
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageMacarons}
+                            data={{
+                                title: 'Macarons >',
+                                price: 'R$ 79,97'
 
                             }}
                         />
@@ -106,6 +125,15 @@ export function HomeUser() {
                             data={{
                                 title: 'Suco de Maracujá >',
                                 price: 'R$ 13,97'
+
+                            }}
+                        />
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageTea}
+                            data={{
+                                title: 'Tè d autunno >',
+                                price: 'R$ 19,97'
 
                             }}
                         />
@@ -194,6 +222,6 @@ export function HomeUser() {
             <Footer />
 
 
-        </Container>
+        </Container >
     )
 };
