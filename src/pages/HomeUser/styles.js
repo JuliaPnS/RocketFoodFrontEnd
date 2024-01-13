@@ -35,7 +35,7 @@ export const Container = styled.div`
                 background: var(--gradients-200, linear-gradient(180deg, #091E26 0%, #00131C 100%));                
 
 
-                margin: 8.25rem 7.75rem;
+                margin: 8.25rem 0;
                 padding: 5.5rem 6.5rem 7.5rem;
  
                 p {
@@ -130,6 +130,19 @@ export const Container = styled.div`
                     }
                 }
             }
+        }
+
+        @media (min-width: 768px) {
+            > .subHeaderBig {
+                section {
+                    margin: 0 7.75rem;
+                }
+            }
+
+            .frameBig {
+                margin: 0 7.75rem;
+            }
+           
         }
 
 `;

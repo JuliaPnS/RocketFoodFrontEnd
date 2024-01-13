@@ -32,74 +32,85 @@ export function HomeUser() {
                         <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                     </section>
                 </div>
+                <div className="frameBig">
+                    <Section title='Refeições'>
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageSalad}
 
-                <Section title='Refeições'>
-                    <PlatesUser
-                        icon={PiHeart}
-                        image={ImageSalad}
+                            data={{
+                                title: 'Salada Ravanello >',
+                                price: 'R$ 49,97'
+                            }}
+                        />
 
-                        data={{
-                            title: 'Salada Ravanello >',
-                            price: 'R$ 49,97'
-                        }}
-                    />
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageSpaguetti}
 
-                    <PlatesUser
-                        icon={PiHeart}
-                        image={ImageSpaguetti}
+                            data={{
+                                title: 'Spaguetti Gambe >',
+                                price: 'R$ 79,97'
 
-                        data={{
-                            title: 'Spaguetti Gambe >',
-                            price: 'R$ 79,97'
+                            }}
+                        />
 
-                        }}
-                    />
-                </Section>
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageSpaguetti}
 
-                <Section title='Pratos Principais'>
-                    <PlatesUser
-                        icon={PiHeart}
-                        image={ImagePrugna}
-                        data={{
-                            title: 'Prugna Pie >',
-                            price: 'R$ 79,97'
+                            data={{
+                                title: 'Torradas de Parma >',
+                                price: 'R$ 79,97'
 
-                        }}
-                    />
+                            }}
+                        />
+                    </Section>
 
-                    <PlatesUser
-                        icon={PiHeart}
-                        image={ImagePeachy}
-                        data={{
-                            title: 'Peachy Pastrie >',
-                            price: 'R$ 32,97'
+                    <Section title='Pratos Principais'>
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImagePrugna}
+                            data={{
+                                title: 'Prugna Pie >',
+                                price: 'R$ 79,97'
 
-                        }}
-                    />
-                </Section>
+                            }}
+                        />
 
-                <Section title='Bebidas'>
-                    <PlatesUser
-                        icon={PiHeart}
-                        image={ImageEspresso}
-                        data={{
-                            title: 'Espresso >',
-                            price: 'R$ 15,97'
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImagePeachy}
+                            data={{
+                                title: 'Peachy Pastrie >',
+                                price: 'R$ 32,97'
 
-                        }}
-                    />
+                            }}
+                        />
+                    </Section>
 
-                    <PlatesUser
-                        icon={PiHeart}
-                        image={ImageJuice}
-                        data={{
-                            title: 'Suco de Maracujá >',
-                            price: 'R$ 13,97'
+                    <Section title='Bebidas'>
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageEspresso}
+                            data={{
+                                title: 'Espresso >',
+                                price: 'R$ 15,97'
 
-                        }}
-                    />
-                </Section>
+                            }}
+                        />
 
+                        <PlatesUser
+                            icon={PiHeart}
+                            image={ImageJuice}
+                            data={{
+                                title: 'Suco de Maracujá >',
+                                price: 'R$ 13,97'
+
+                            }}
+                        />
+                    </Section>
+                </div>
             </MediaQuery>
             <MediaQuery maxWidth={600}>
                 <HeaderUser />
