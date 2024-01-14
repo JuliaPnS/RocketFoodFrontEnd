@@ -33,7 +33,6 @@ export function MenuAdmin() {
     }, [search]);
     console.log(search)
 
-
     return (
         <Container>
             <div className="header">

@@ -101,7 +101,7 @@ export const Container = styled.div`
 
 }
 
-@media (width: 320px) {
+@media (widows: 320px) {
     .plateInfos {
         width: 19.75rem;
 
@@ -114,11 +114,9 @@ export const Container = styled.div`
         margin: 2rem;
         
         font-size: 0.8rem;
+        }
+
     }
-
-}
-
-
 }
 
 @media (min-width: 1000px) {
