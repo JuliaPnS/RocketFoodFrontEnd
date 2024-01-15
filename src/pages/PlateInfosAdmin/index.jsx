@@ -5,6 +5,7 @@ import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 import { Container } from './styles';
 import { HeaderAdminDesktop } from '../../components/HeaderAdminDesktop';
+import { HeaderAdmin } from '../../components/HeaderAdmin';
 import { Footer } from '../../components/Footer';
 import { Button } from '../../components/ButtonBig';
 import { IngredientsInfos } from '../../components/IngredientsInfos';
@@ -15,10 +16,10 @@ export function PlateInfosAdmin() {
 
     return (
         <Container>
-            <MediaQuery minWidth={1000}>
+            <MediaQuery minWidth={1440}>
                 <HeaderAdminDesktop />
+                <Link to='/admin'><IoIosArrowBack />voltar</Link>
                 <div className='plateInfosDesktop'>
-                    <Link to='/admin'><IoIosArrowBack />voltar</Link>
                     <div className="plate">
                         <img src={Image} alt="Imagem do prato" />
                         <section>
@@ -39,10 +40,11 @@ export function PlateInfosAdmin() {
                     </div>
                 </div>
             </MediaQuery>
-            <MediaQuery maxWidth={990}>
-                <HeaderAdminDesktop />
+            <MediaQuery maxWidth={1024}>
+                <HeaderAdmin />
+                <Link to='/admin'><IoIosArrowBack />voltar</Link>
                 <div className='plateInfos'>
-                    <Link to='/admin'><IoIosArrowBack />voltar</Link>
+                    
                     <div className="plate">
                         <img src={Image} alt="Imagem do prato" />
                         <section>

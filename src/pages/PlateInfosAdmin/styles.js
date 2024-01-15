@@ -1,6 +1,22 @@
 import styled from 'styled-components';
 
-export const Container = styled.div` 
+export const Container = styled.div`
+
+> a {    
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 140%;
+
+        display: flex;
+        align-items: center;
+
+        margin-left: 3.5rem;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
 
    > .plateInfos {
         height: 100vh;
@@ -17,20 +33,6 @@ export const Container = styled.div`
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
-
-        > a {    
-        
-            font-weight: 500;
-            font-size: 1.5rem;
-            line-height: 140%;
-
-            display: flex;
-            align-items: center;
-
-            svg {
-                width: 2rem;
-                height: 2rem;
-            }
         
     }
 
@@ -81,12 +83,8 @@ export const Container = styled.div`
         justify-content: center;
 
         }
-   
 
-    
-}
-
-@media (width: 320px) {
+@media (min-width: 320px) {
     .plateInfos {
         width: 19.75rem;
 
@@ -111,7 +109,27 @@ export const Container = styled.div`
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
+
+    > a {    
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 140%;
+
+        display: flex;
+        align-items: center;
+
+        margin-left: 3.5rem;
+
+        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+            
+    }
+
     > .plateInfosDesktop {
         width: 19.75rem;
 
@@ -125,24 +143,6 @@ export const Container = styled.div`
             height: 16.5rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
-        }
-
-        > a {    
-            
-            font-weight: 500;
-            font-size: 1.5rem;
-            line-height: 140%;
-
-            display: flex;
-            align-items: center;
-
-            color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
-
-            svg {
-                width: 2rem;
-                height: 2rem;
-            }
-            
         }
 
     > .plate {

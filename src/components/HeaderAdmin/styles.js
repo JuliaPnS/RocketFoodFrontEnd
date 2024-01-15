@@ -14,15 +14,6 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_100};
                         
     margin-bottom: 2.25rem;
-    
-    @media (min-width: 425px) {
-        svg {
-            margin-right: 5rem;
-            margin-left: 1.75rem;
-            width: 2rem;
-            height: 2rem;
-        }
-    }
 
     h1 {
         font-weight: 700;
@@ -49,20 +40,26 @@ export const Container = styled.div`
             height: 1.53;
 
         }
-    }
+    } 
 
-    @media (max-width: 375px) {
-        h1 {
-            font-weight: 700;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.2rem;
-
-            display: flex;
-            align-items: center;
-            text-align: center;
-            gap: .3rem;
+    @media (min-width: 425px) {
+        svg {
+            margin-right: 5rem;
+            margin-left: 1.75rem;
+            width: 2rem;
+            height: 2rem;
         }
-
     }
+
+    @media (min-width: 320px) {
+        svg {
+            margin-right: 1rem;
+            margin-left: 1rem;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+
 
 `;
