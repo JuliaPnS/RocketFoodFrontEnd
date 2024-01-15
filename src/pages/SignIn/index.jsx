@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 
-
 import { useAuth } from '../../hooks/auth';
 
 
@@ -18,8 +17,10 @@ export function SignIn() {
 
     const { signIn } = useAuth();
 
+
     function handleSignIn() {
         signIn({ email, password })
+
     }
 
     return (

@@ -9,7 +9,7 @@ import { EditPlate } from '../pages/EditPlate';
 export function AppAdminRoutes() {
     return (
         <Routes>
-            <Route path='/admin' element={<HomeAdmin />} />
+            <Route path='/' element={<HomeAdmin />} />
             <Route path='/menuadmin' element={<MenuAdmin />} />
             <Route path='/platesadmin/:id' element={<PlateInfosAdmin />} />
             <Route path='/new' element={<NewPlate />} />

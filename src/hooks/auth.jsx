@@ -5,9 +5,11 @@ import { api } from '../service/api';
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
+    
     const [data, setData] = useState({});
-
+    
     async function signIn({email, password}) {
+
         try {
             const response = await api.post("/sessions", { email, password });
             const { user, token } = response.data;
@@ -17,12 +19,12 @@ function AuthProvider({ children }) {
             
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             setData({ user, token })
-    
+
         } catch (error) {
             if(error.response) {
                 alert(error.response.data.message);
             } else {
-                alert("Não foi possivel entrar");
+               alert("Não foi possivel entrar");
             }
         }
     

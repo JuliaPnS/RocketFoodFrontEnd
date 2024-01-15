@@ -9,7 +9,7 @@ export function Routes() {
     const { user } = useAuth();
     return (
         <BrowserRouter>
-          <AppAdminRoutes />
+         { user ? (user.isAdmin == 0 ? <AppAdminRoutes /> : <AppUserRoutes />) : <AuthUserRoutes /> }
         </BrowserRouter>
     )
 }
