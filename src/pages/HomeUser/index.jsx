@@ -40,7 +40,7 @@ export function HomeUser() {
                 <div className="frameDesktop">
                     <div className="sectionOne">
                         <Section title='Refeições'>
-                            <IoIosArrowBack className='arrow'/>
+                            <IoIosArrowBack id='arrowBack' className='arrow' />
                             <PlatesUser
                                 icon={PiHeart}
                                 image={ImageSalad}
@@ -72,72 +72,80 @@ export function HomeUser() {
 
                                 }}
                             />
-                            <IoIosArrowForward className='arrow' />
+                            <IoIosArrowForward id='arrowForward' className='arrow' />
                         </Section>
                     </div>
+                    <div className="sectionTwo">
 
-                    <Section title='Pratos Principais'>
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImagePrugna}
-                            data={{
-                                title: 'Prugna Pie >',
-                                price: 'R$ 79,97'
+                        <Section title='Pratos Principais'>
+                            <IoIosArrowBack id='arrowBack' className='arrow' />
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImagePrugna}
+                                data={{
+                                    title: 'Prugna Pie >',
+                                    price: 'R$ 79,97'
 
-                            }}
-                        />
+                                }}
+                            />
 
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImagePeachy}
-                            data={{
-                                title: 'Peachy Pastrie >',
-                                price: 'R$ 32,97'
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImagePeachy}
+                                data={{
+                                    title: 'Peachy Pastrie >',
+                                    price: 'R$ 32,97'
 
-                            }}
-                        />
+                                }}
+                            />
 
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageMacarons}
-                            data={{
-                                title: 'Macarons >',
-                                price: 'R$ 79,97'
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageMacarons}
+                                data={{
+                                    title: 'Macarons >',
+                                    price: 'R$ 79,97'
 
-                            }}
-                        />
-                    </Section>
+                                }}
+                            />
+                            <IoIosArrowForward id='arrowForward' className='arrow' />
+                        </Section>
 
-                    <Section title='Bebidas'>
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageEspresso}
-                            data={{
-                                title: 'Espresso >',
-                                price: 'R$ 15,97'
+                    </div>
+                    <div className="sectionThree">
+                        <Section title='Bebidas'>
+                            <IoIosArrowBack id='arrowBack' className='arrow' />
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageEspresso}
+                                data={{
+                                    title: 'Espresso >',
+                                    price: 'R$ 15,97'
 
-                            }}
-                        />
+                                }}
+                            />
 
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageJuice}
-                            data={{
-                                title: 'Suco de Maracujá >',
-                                price: 'R$ 13,97'
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageJuice}
+                                data={{
+                                    title: 'Suco de Maracujá >',
+                                    price: 'R$ 13,97'
 
-                            }}
-                        />
-                        <PlatesUser
-                            icon={PiHeart}
-                            image={ImageTea}
-                            data={{
-                                title: 'Tè d autunno >',
-                                price: 'R$ 19,97'
+                                }}
+                            />
+                            <PlatesUser
+                                icon={PiHeart}
+                                image={ImageTea}
+                                data={{
+                                    title: 'Tè d autunno >',
+                                    price: 'R$ 19,97'
 
-                            }}
-                        />
-                    </Section>
+                                }}
+                            />
+                            <IoIosArrowForward id='arrowForward' className='arrow' />
+                        </Section>
+                    </div>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={600}>

@@ -4,7 +4,7 @@ export const Container = styled.div`
        
 
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_100};
-        
+
 
         > .header {
             display: flex;
@@ -20,7 +20,6 @@ export const Container = styled.div`
             
             margin-bottom: 2.25rem;
 
-            
 
             h1 {
                 font-family: 'Roboto', sans-serif;

@@ -3,12 +3,38 @@ import { Container } from './styles';
 import { PiReceiptLight, PiMagnifyingGlassLight } from 'react-icons/pi';
 import { RxExit } from "react-icons/rx";
 
+import { useState, useEffect } from 'react';
+import { api } from '../../service/api';
+
 import { Input } from '../Input';
 import { Button } from '../ButtonBig';
+import { PlatesUser } from '../../components/PlatesUser';
 
 
 
 export function HeaderUserDesktop() {
+    const [search, setSearch] = useState("");
+    const [plates, setPlates] = useState([]);
+
+    useEffect(() => {
+        async function fetchPlates() {
+            console.log("ssdefddsds", search)
+            if (search) {
+                console.log("ssaaaaaaaaaaaaaaaaa", search)
+
+                const response = await api.get(`/plates?search=${search}`);
+
+                setPlates(response.data)
+
+            } else {
+                setPlates([])
+            }
+
+        }
+
+        fetchPlates()
+
+    }, [search]);
     return (
         <Container>
 
@@ -30,6 +56,16 @@ export function HeaderUserDesktop() {
                     icon={PiMagnifyingGlassLight}
                     onChange={(e) => setSearch(e.target.value)}
                 />
+
+                {
+                    plates.map(plate => (
+                        <PlatesUser
+                            key={String(plates.id)}
+                            data={plate}
+                        />
+                    ))
+
+                }
             </div>
             <div className="buttonReceipt">
                 <Button

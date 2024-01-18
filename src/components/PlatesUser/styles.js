@@ -55,7 +55,7 @@ export const Container = styled.div`
 
     }
     svg:hover {
-        
+        fill: ${({ theme }) => theme.COLORS.BUTTON_TOMATO_100};
         cursor: pointer;
     }
 

@@ -5,6 +5,7 @@ export const Container = styled.div`
     .children {
         display: flex;
         flex-direction: row;
+        align-items: center;
 
     }
 

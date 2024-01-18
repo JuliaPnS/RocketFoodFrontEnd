@@ -6,9 +6,8 @@ import { RxExit } from "react-icons/rx";
 import { Input } from '../Input';
 import { Button } from '../ButtonBig';
 
-
-
 export function HeaderAdminDesktop() {
+    
     return (
         <Container>
             <h1>
