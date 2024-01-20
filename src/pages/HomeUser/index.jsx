@@ -1,6 +1,8 @@
 import { PiHeart } from 'react-icons/pi';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
+import { useState, useEffect } from 'react';
+import { api } from '../../service/api';
 
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
@@ -25,10 +27,11 @@ import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 
 export function HomeUser() {
+    const [plates, setPlates] = useState([]);
     return (
         <Container>
             <MediaQuery minWidth={750}>
-                <HeaderUserDesktop />
+                <HeaderUserDesktop setPlates={setPlates} plates={plates} />
                 <div className='subHeaderDesktop'>
                     <img src={ImageBig} alt="Imagem macarons" />
 
@@ -50,6 +53,8 @@ export function HomeUser() {
                                     price: 'R$ 49,97'
                                 }}
                             />
+
+                       
 
                             <PlatesUser
                                 icon={PiHeart}
@@ -148,7 +153,7 @@ export function HomeUser() {
                     </div>
                 </div>
             </MediaQuery>
-            <MediaQuery maxWidth={600}>
+            <MediaQuery maxWidth={749}>
                 <HeaderUser />
                 <div className='subHeader'>
                     <img src={Image} alt="Imagem macarons" />

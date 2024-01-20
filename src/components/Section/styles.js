@@ -18,4 +18,11 @@ export const Container = styled.div`
         margin: 3.87rem 0 1.5rem 1.5rem;
     }
 
+    @media (min-width: 1440px) {
+        h2 {
+            font-size: 2rem;
+
+        }
+    }
+
 `;

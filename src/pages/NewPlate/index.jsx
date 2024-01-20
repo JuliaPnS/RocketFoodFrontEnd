@@ -74,6 +74,7 @@ export function NewPlate() {
                         <option value="refeicoes">Refeições</option>
                         <option value="pratosPrincipais">Pratos Principais</option>
                         <option value="bebidas">Bebidas</option>
+                        <option value="sobremesas">Sobremesas</option>
                     </select>
                     <IoIosArrowDown />
                 </div>

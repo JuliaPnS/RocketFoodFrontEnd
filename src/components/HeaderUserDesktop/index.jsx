@@ -10,12 +10,12 @@ import { Input } from '../Input';
 import { Button } from '../ButtonBig';
 import { PlatesUser } from '../../components/PlatesUser';
 
-
-
-export function HeaderUserDesktop() {
+export function HeaderUserDesktop({setPlates, plates}) {
     const [search, setSearch] = useState("");
-    const [plates, setPlates] = useState([]);
-
+    console.log("AQUII", setPlates)
+    if(!setPlates) {
+        const [plates, setPlates] = useState([]);
+    } 
     useEffect(() => {
         async function fetchPlates() {
             console.log("ssdefddsds", search)
@@ -56,16 +56,6 @@ export function HeaderUserDesktop() {
                     icon={PiMagnifyingGlassLight}
                     onChange={(e) => setSearch(e.target.value)}
                 />
-
-                {
-                    plates.map(plate => (
-                        <PlatesUser
-                            key={String(plates.id)}
-                            data={plate}
-                        />
-                    ))
-
-                }
             </div>
             <div className="buttonReceipt">
                 <Button
@@ -76,10 +66,6 @@ export function HeaderUserDesktop() {
             </div>
 
             <RxExit />
-
-
-
-
         </Container>
     )
 }

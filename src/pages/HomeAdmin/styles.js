@@ -139,20 +139,46 @@ export const Container = styled.div`
                     margin: 0 7.75rem;
                 }
             }
-
             .frameDesktop {
                 margin: 0 7.75rem;
-              
-                > .sectionOne {
-                    
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+
+                > .sectionOne, .sectionTwo, .sectionThree {
+                    position: relative;
+
+                    svg:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: 0.2s;
+                        stroke-width: 10px;
+                    }
+
+                   
                     .arrow {
                         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
-                        width: 2rem;
-                        height: 2rem;                        
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        position: absolute;
                          
+                    }
+
+                    #arrowForward {
+                        right: .1rem;
+                        z-index: 1;
+                    }
+
+                    #arrowBack {
+                        left: 1.7rem;
+                        z-index: 1;
                     }
                 }
             }
            
         }
+
+
+        
 `;

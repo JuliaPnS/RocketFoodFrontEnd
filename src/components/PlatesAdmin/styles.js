@@ -55,32 +55,51 @@ export const Container = styled.div`
 
     }
 
-    > .input {
-        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+    @media (min-width: 1440px) {
+        
+        width: 17.31rem;
+        height: 28rem;
 
         display: flex;
-        flex-direction: row;
-        gap: 0.88rem;
+        align-items: center;
+        justify-content: center;
+        gap: 0.95rem;
 
-        input {
-            color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
-            text-align: center;
 
-            border: none;
-            background: transparent;
+            img {
+                width: 11rem;
+                height: 11rem;
+            }
 
-            width: 1.5rem;
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
 
-            
+            svg:hover {
+                stroke-width: 10px;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+
+            h4 {
+                color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                font-size: 0.875rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 140%;
+                width: 16rem;
+
+                text-align: center;
+            }
         }
-       
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
 
 `;
