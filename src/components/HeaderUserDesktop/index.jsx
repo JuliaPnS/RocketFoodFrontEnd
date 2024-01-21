@@ -8,7 +8,6 @@ import { api } from '../../service/api';
 
 import { Input } from '../Input';
 import { Button } from '../ButtonBig';
-import { PlatesUser } from '../../components/PlatesUser';
 
 export function HeaderUserDesktop({setPlates, plates}) {
     const [search, setSearch] = useState("");

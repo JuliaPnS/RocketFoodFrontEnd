@@ -146,7 +146,7 @@ export const Container = styled.div`
                 flex-direction: column;
 
 
-                > .sectionOne, .sectionTwo, .sectionThree {
+                > .sections {
                     position: relative;
 
                     svg:hover {

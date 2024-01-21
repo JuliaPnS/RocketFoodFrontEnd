@@ -2,6 +2,9 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 
+import { useState, useEffect } from 'react';
+import { api } from '../../service/api';
+
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
 import { HeaderAdmin } from '../../components/HeaderAdmin';
@@ -23,11 +26,13 @@ import ImageTea from '../../assets/plates/image9.png';
 
 
 export function HomeAdmin() {
+    const [plates, setPlates] = useState([]);
 
     return (
+
         <Container>
             <MediaQuery minWidth={1440}>
-                <HeaderAdminDesktop />
+                <HeaderAdminDesktop setPlates={setPlates} plates={plates} />
 
                 <div className='subHeaderDesktop'>
                     <img src={Image} alt="Imagem de macarons" />
@@ -38,109 +43,32 @@ export function HomeAdmin() {
                 </div>
 
                 <div className="frameDesktop">
-                    <div className="sectionOne">
-                        <Section title='Refeições'>
-                            <IoIosArrowBack id='arrowBack' className='arrow' />
-                            <PlatesAdmin
-                                image={ImageSalad}
-                                data={{
-                                    title: 'Spaguetti Gambe >',
-                                    price: 'R$ 79,97'
+                    {
+                        Array.from(Map.groupBy(plates, (plate) => plate.category)).map((result) => {
+                            return <div className="sections">
+                                <Section title={result[0]}>
+                                    <IoIosArrowBack id='arrowBack' className='arrow' />
+                                    {
+                                        result[1].map(plate => (
+                                            <PlatesAdmin
+                                                key={String(plate.id)}
 
-                                }}
-                            />
+                                                data={plate}
 
-                            <PlatesAdmin
-                                image={ImageSpaguetti}
 
-                                data={{
-                                    title: 'Salada Ravanello >',
-                                    price: 'R$ 49,97',
-                                    description: 'saladinha nham'
+                                            />
+                                        ))
+                                    }
 
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageToast}
-
-                                data={{
-                                    title: 'Torradas de Parma >',
-                                    price: 'R$ 25,97'
-
-                                }}
-                            />
-                            <IoIosArrowForward id='arrowForward' className='arrow' />
-                        </Section>
-                    </div>
-                    <div className="sectionTwo">
-                        <Section title='Pratos Principais'>
-                            <IoIosArrowBack id='arrowBack' className='arrow' />
-                            <PlatesAdmin
-                                image={ImagePrugna}
-                                data={{
-                                    title: 'Prugna Pie >',
-                                    price: 'R$ 79,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImagePeachy}
-                                data={{
-                                    title: 'Peachy Pastrie >',
-                                    price: 'R$ 32,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageMacarons}
-                                data={{
-                                    title: 'Macarons >',
-                                    price: 'R$ 79,97'
-
-                                }}
-                            />
-                            <IoIosArrowForward id='arrowForward' className='arrow' />
-                        </Section>
-                    </div>
-                    <div className="sectionThree">
-                        <Section title='Bebidas'>
-                            <IoIosArrowBack id='arrowBack' className='arrow' />
-                            <PlatesAdmin
-                                image={ImageEspresso}
-                                data={{
-                                    title: 'Espresso >',
-                                    price: 'R$ 15,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageJuice}
-                                data={{
-                                    title: 'Suco de Maracujá >',
-                                    price: 'R$ 13,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageTea}
-                                data={{
-                                    title: 'Tè d autunno >',
-                                    price: 'R$ 19,97'
-
-                                }}
-                            />
-                            <IoIosArrowForward id='arrowForward' className='arrow' />
-                        </Section>
-                    </div>
+                                    <IoIosArrowForward id='arrowForward' className='arrow' />
+                                </Section>
+                            </div>
+                        })
+                    }
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={1439}>
-                <HeaderAdmin />
+                <HeaderAdmin setPlates={setPlates} plates={plates}/>
 
                 <div className='subHeader'>
                     <img src={Image} alt="Imagem de macarons" />
@@ -151,104 +79,28 @@ export function HomeAdmin() {
                 </div>
 
                 <div className="frameDesktop">
-                    <div className="sectionOne">
-                        <Section title='Refeições'>
-                            <IoIosArrowBack id='arrowBack' className='arrow' />
-                            <PlatesAdmin
-                                image={ImageSalad}
-                                data={{
-                                    title: 'Spaguetti Gambe >',
-                                    price: 'R$ 79,97'
+                    {
+                        Array.from(Map.groupBy(plates, (plate) => plate.category)).map((result) => {
+                            return <div className="sections">
+                                <Section title={result[0]}>
+                                    <IoIosArrowBack id='arrowBack' className='arrow' />
+                                    {
+                                        result[1].map(plate => (
+                                            <PlatesAdmin
+                                                key={String(plate.id)}
 
-                                }}
-                            />
+                                                data={plate}
 
-                            <PlatesAdmin
-                                image={ImageSpaguetti}
 
-                                data={{
-                                    title: 'Salada Ravanello >',
-                                    price: 'R$ 49,97'
+                                            />
+                                        ))
+                                    }
 
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageToast}
-
-                                data={{
-                                    title: 'Torradas de Parma >',
-                                    price: 'R$ 25,97'
-
-                                }}
-                            />
-                            <IoIosArrowForward id='arrowForward' className='arrow' />
-                        </Section>
-                    </div>
-                    <div className="sectionTwo">
-                        <Section title='Pratos Principais'>
-                            <IoIosArrowBack id='arrowBack' className='arrow' />
-                            <PlatesAdmin
-                                image={ImagePrugna}
-                                data={{
-                                    title: 'Prugna Pie >',
-                                    price: 'R$ 79,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImagePeachy}
-                                data={{
-                                    title: 'Peachy Pastrie >',
-                                    price: 'R$ 32,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageMacarons}
-                                data={{
-                                    title: 'Macarons >',
-                                    price: 'R$ 79,97'
-
-                                }}
-                            />
-                            <IoIosArrowForward id='arrowForward' className='arrow' />
-                        </Section>
-                    </div>
-                    <div className="sectionThree">
-                        <Section title='Bebidas'>
-                            <IoIosArrowBack id='arrowBack' className='arrow' />
-                            <PlatesAdmin
-                                image={ImageEspresso}
-                                data={{
-                                    title: 'Espresso >',
-                                    price: 'R$ 15,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageJuice}
-                                data={{
-                                    title: 'Suco de Maracujá >',
-                                    price: 'R$ 13,97'
-
-                                }}
-                            />
-
-                            <PlatesAdmin
-                                image={ImageTea}
-                                data={{
-                                    title: 'Tè d autunno >',
-                                    price: 'R$ 19,97'
-
-                                }}
-                            />
-                            <IoIosArrowForward id='arrowForward' className='arrow' />
-                        </Section>
-                    </div>
+                                    <IoIosArrowForward id='arrowForward' className='arrow' />
+                                </Section>
+                            </div>
+                        })
+                    }
                 </div>
             </MediaQuery>
             <Footer />

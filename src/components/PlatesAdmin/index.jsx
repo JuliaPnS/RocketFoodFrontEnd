@@ -12,16 +12,18 @@ export function PlatesAdmin({ data, image, ...rest }) {
         <Container {...rest}>
             <MediaQuery minWidth={1440}>
                 <Link to='/platesadmin/:id'><PiPencilSimpleLight /></Link>
-                <img src={image} alt="Imagem do prato" />
+                <img src={data.image} alt="Imagem do prato" />
+                
                 <h3>{data.title}</h3>
                 <h4>{data.description}</h4>
                 <p>{data.price}</p>
+
 
             </MediaQuery>
 
             <MediaQuery maxWidth={1439}>
                 <Link to='/platesadmin/:id'><PiPencilSimpleLight /></Link>
-                <img src={image} alt="Imagem do prato" />
+                <img src={data.image} alt="Imagem do prato" />
                 <h3>{data.title}</h3>
                 <p>{data.price}</p>
 

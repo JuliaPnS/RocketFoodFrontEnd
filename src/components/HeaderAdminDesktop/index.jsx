@@ -1,13 +1,32 @@
 import { Container } from './styles';
 
+import { useState, useEffect } from 'react';
+import { api } from '../../service/api';
+
 import { PiReceiptLight, PiMagnifyingGlassLight } from 'react-icons/pi';
 import { RxExit } from "react-icons/rx";
 
 import { Input } from '../Input';
 import { Button } from '../ButtonBig';
 
-export function HeaderAdminDesktop() {
-    
+export function HeaderAdminDesktop({ setPlates, plates }) {
+    const [search, setSearch] = useState("");
+    if (!setPlates) {
+        const [plates, setPlates] = useState([]);
+    }
+    useEffect(() => {
+        async function fetchPlates() {
+        
+            const response = await api.get(`/plates?search=${search}`);
+
+            setPlates(response.data)
+            console.log(response.data)
+        }
+
+        fetchPlates()
+
+    }, [search]);
+
     return (
         <Container>
             <h1>
@@ -28,8 +47,7 @@ export function HeaderAdminDesktop() {
                     placeholder='Busque por pratos ou ingredientes'
                     type='text'
                     icon={PiMagnifyingGlassLight}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
+                    onChange={(e) => setSearch(e.target.value)} />
             </div>
             <div className="buttonReceipt">
                 <Button
