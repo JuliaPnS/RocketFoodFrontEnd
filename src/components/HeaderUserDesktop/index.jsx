@@ -11,15 +11,12 @@ import { Button } from '../ButtonBig';
 
 export function HeaderUserDesktop({setPlates, plates}) {
     const [search, setSearch] = useState("");
-    console.log("AQUII", setPlates)
     if(!setPlates) {
         const [plates, setPlates] = useState([]);
     } 
     useEffect(() => {
         async function fetchPlates() {
-            console.log("ssdefddsds", search)
             if (search) {
-                console.log("ssaaaaaaaaaaaaaaaaa", search)
 
                 const response = await api.get(`/plates?search=${search}`);
 
@@ -28,7 +25,6 @@ export function HeaderUserDesktop({setPlates, plates}) {
             } else {
                 setPlates([])
             }
-
         }
 
         fetchPlates()

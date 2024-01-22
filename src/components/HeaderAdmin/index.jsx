@@ -8,7 +8,7 @@ import { api } from '../../service/api';
 
 export function HeaderAdmin({ setPlates, plates }) {
     if (!setPlates) {
-        const [plates, setPlates] = useState([]);
+        [plates, setPlates] = useState([]);
     }
     useEffect(() => {
         async function fetchPlates() {
@@ -16,7 +16,6 @@ export function HeaderAdmin({ setPlates, plates }) {
             const response = await api.get(`/plates?search=`);
 
             setPlates(response.data)
-            console.log(response.data)
         }
 
         fetchPlates()
@@ -41,7 +40,6 @@ export function HeaderAdmin({ setPlates, plates }) {
                 food explorer
                 <span>admin</span>
             </h1>
-
 
         </Container>
     )

@@ -16,7 +16,7 @@ export function PlatesAdmin({ data, image, ...rest }) {
                 
                 <h3>{data.title}</h3>
                 <h4>{data.description}</h4>
-                <p>{data.price}</p>
+                <p>R$ {data.price}</p>
 
 
             </MediaQuery>
@@ -25,7 +25,7 @@ export function PlatesAdmin({ data, image, ...rest }) {
                 <Link to='/platesadmin/:id'><PiPencilSimpleLight /></Link>
                 <img src={data.image} alt="Imagem do prato" />
                 <h3>{data.title}</h3>
-                <p>{data.price}</p>
+                <p>R$ {data.price}</p>
 
             </MediaQuery>
         </Container>

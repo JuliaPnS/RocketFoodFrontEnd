@@ -13,16 +13,6 @@ import { Section } from '../../components/Section';
 import { PlatesAdmin } from '../../components/PlatesAdmin';
 
 import Image from '../../assets/imgsubheader.png';
-import ImageSalad from '../../assets/plates/image1.png';
-import ImageSpaguetti from '../../assets/plates/image2.png';
-import ImagePrugna from '../../assets/plates/image3.png';
-import ImagePeachy from '../../assets/plates/image4.png';
-import ImageEspresso from '../../assets/plates/image5.png';
-import ImageJuice from '../../assets/plates/image6.png';
-import ImageToast from '../../assets/plates/image7.png';
-import ImageMacarons from '../../assets/plates/image8.png';
-import ImageTea from '../../assets/plates/image9.png';
-
 
 
 export function HomeAdmin() {
@@ -52,10 +42,7 @@ export function HomeAdmin() {
                                         result[1].map(plate => (
                                             <PlatesAdmin
                                                 key={String(plate.id)}
-
                                                 data={plate}
-
-
                                             />
                                         ))
                                     }

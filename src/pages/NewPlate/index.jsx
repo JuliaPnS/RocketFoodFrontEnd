@@ -17,6 +17,9 @@ import { IngredientsTag } from '../../components/IngredientsTag';
 export function NewPlate() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const [category, setCategory] = useState("");
+    const [price, setPrice] = useState("");
+    const [image, setImage] = useState("");
 
     const [ingredients, setIngredients] = useState([]);
     const [newIngredient, setNewIngredient] = useState("");
@@ -24,10 +27,20 @@ export function NewPlate() {
     const navigate = useNavigate();
 
     async function handleNewPlate() {
-        await api.post("/plates", {
+        const response = await api.post("/plates", {
             title,
-            description, 
-            ingredients
+            description,
+            ingredients,
+            price,
+            category
+        });
+
+        var formData = new FormData();
+        formData.append("image", image);
+        await api.patch(`/plates/plateImage/${response.data.id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
         });
 
         alert("Prato criado com sucesso!");
@@ -54,7 +67,8 @@ export function NewPlate() {
                 <label htmlFor="image">Imagem do Prato</label>
                 <div className="image">
                     <PiUploadSimple />
-                    <input type="file" id="image" placeholder="Selecione Imagem"></input>
+                    <input type="file" id="image" placeholder="Selecione Imagem"
+                        onChange={e => setImage(e.target.files[0])}></input>
                     <p>Selecione Imagem</p>
                 </div>
 
@@ -64,12 +78,13 @@ export function NewPlate() {
                     placeholder='Ex: Salada Ceasar'
                     type='text'
                     onChange={e => setTitle(e.target.value)}
-                   
+
                 />
 
                 <label htmlFor="category">Categoria</label>
                 <div className="category">
-                    <select name="category" id="category" placeholder="Selecione a Categoria" >
+                    <select name="category" id="category" placeholder="Selecione a Categoria"
+                        onChange={e => setCategory(e.target.value)} >
                         <option value="">Selecione a categoria</option>
                         <option value="refeicoes">Refeições</option>
                         <option value="pratosPrincipais">Pratos Principais</option>
@@ -110,7 +125,8 @@ export function NewPlate() {
                     id='price'
                     placeholder='R$0,00'
                     type='text'
-                /> 
+                    onChange={e => setPrice(e.target.value)}
+                />
 
                 <label htmlFor="description">Descrição</label>
                 <TextArea
