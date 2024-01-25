@@ -49,11 +49,10 @@ export function HeaderAdminDesktop({ setPlates, plates }) {
                     icon={PiMagnifyingGlassLight}
                     onChange={(e) => setSearch(e.target.value)} />
             </div>
-            <div className="buttonReceipt">
+            <div className="button">
                 <Button
-                    icon={PiReceiptLight}
-                    title="Pedidos"
-
+                    title="Novo Prato"
+                    to='/new'
                 />
             </div>
 

@@ -1,10 +1,11 @@
 import { PiUploadSimple, PiX } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowDown } from 'react-icons/io';
-
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+import { api } from '../../service/api';
 
 
 import { Container } from './styles';
@@ -19,9 +20,37 @@ import { IngredientsTag } from '../../components/IngredientsTag';
 
 
 export function EditPlate() {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [category, setCategory] = useState("");
+    const [price, setPrice] = useState("");
+    const [image, setImage] = useState("");
 
     const [ingredients, setIngredients] = useState([]);
     const [newIngredient, setNewIngredient] = useState("");
+
+    const navigate = useNavigate();
+
+    async function handleEditPlate() {
+        const response = await api.post("/plates", {
+            title,
+            description,
+            ingredients,
+            price,
+            category
+        });
+
+        var formData = new FormData();
+        formData.append("image", image);
+        await api.patch(`/plates/plateImage/${response.data.id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+
+        alert("Prato atualizado com sucesso!");
+        navigate("/admin");
+    }
 
     function handleAddIngredient() {
         setIngredients(prevState => [...prevState, newIngredient])
@@ -44,7 +73,7 @@ export function EditPlate() {
                     <label for="image">Imagem do Prato</label>
                     <div className="image">
                         <PiUploadSimple />
-                        <input type="file" id="image" placeholder="Selecione Imagem"></input>
+                        <input type="file" id="image" placeholder="Selecione Imagem" onChange={e => setImage(e.target.files[0])}></input>
                         <p>Selecione uma imagem para alterá-la</p>
                     </div>
 
@@ -53,13 +82,20 @@ export function EditPlate() {
                         id='name'
                         placeholder='Ex: Salada Ceasar'
                         type='text'
+                        onChange={e => setTitle(e.target.value)}
+
                     />
 
                     <label for="category">Categoria</label>
                     <div className="category">
-                        <select name="category" id="category" placeholder="Selecione a Categoria" >
-                            <option value="">Refeição</option>
-                            <option value="paonaan">Pão Naan</option>
+                        <select name="category" id="category" placeholder="Selecione a Categoria"
+                            onChange={e => setCategory(e.target.value)} >
+                            <option value="">Selecione a categoria</option>
+                            <option value="refeicoes">Refeições</option>
+                            <option value="pratosPrincipais">Pratos Principais</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="sobremesas">Sobremesas</option>
+
                         </select>
                         <IoIosArrowDown />
                     </div>
@@ -94,6 +130,7 @@ export function EditPlate() {
                         id='price'
                         placeholder='R$0,00'
                         type='text'
+                        onChange={e => setPrice(e.target.value)}
                     />
 
                     <label for="description">Descrição</label>
@@ -103,8 +140,8 @@ export function EditPlate() {
                     />
 
                     <div className="buttons">
-                        <Button to='/admin' className='delete' title='Excluir Prato' ></Button>
-                        <Button to='/admin' title='Salvar Alterações' ></Button>
+                        <Button to='/' className='delete' title='Excluir Prato' ></Button>
+                        <Button to='/' title='Salvar Alterações' ></Button>
                     </div>
 
 
@@ -123,7 +160,7 @@ export function EditPlate() {
                             <label for="image">Imagem do Prato</label>
                             <div className="image">
                                 <PiUploadSimple />
-                                <input type="file" id="image" placeholder="Selecione Imagem"></input>
+                                <input type="file" id="image" placeholder="Selecione Imagem" onChange={e => setImage(e.target.files[0])}></input>
                                 <p>Selecione imagem</p>
                             </div>
                         </div>
@@ -138,9 +175,13 @@ export function EditPlate() {
                         <div className="thirdChild">
                             <label for="category">Categoria</label>
                             <div className="category">
-                                <select name="category" id="category" placeholder="Selecione a Categoria" >
-                                    <option value="">Refeição</option>
-                                    <option value="paonaan">Pão Naan</option>
+                                <select name="category" id="category" placeholder="Selecione a Categoria"
+                                    onChange={e => setCategory(e.target.value)} >
+                                    <option value="">Selecione a categoria</option>
+                                    <option value="refeicoes">Refeições</option>
+                                    <option value="pratosPrincipais">Pratos Principais</option>
+                                    <option value="bebidas">Bebidas</option>
+                                    <option value="sobremesas">Sobremesas</option>
                                 </select>
                                 <IoIosArrowDown />
                             </div>
@@ -183,11 +224,13 @@ export function EditPlate() {
                     <TextArea
                         id='description'
                         placeholder='Fale brevemente sobre o prato, seus ingredientes e composição'
+                        onChange={e => setDescription(e.target.value)}
                     />
 
+
                     <div className="buttons">
-                        <Button to='/admin' className='delete' title='Excluir Prato' ></Button>
-                        <Button to='/admin' title='Salvar Alterações' ></Button>
+                        <Button to='/' className='delete' title='Excluir Prato' ></Button>
+                        <Button to='/' title='Salvar Alterações' onClick={handleEditPlate} ></Button>
                     </div>
 
 

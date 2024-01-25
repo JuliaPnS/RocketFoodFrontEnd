@@ -104,6 +104,53 @@ export const Container = styled.div`
 
     }
 
+    @media (min-width: 1440px) {
+        
+        width: 17.31rem;
+        height: 28rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0.95rem;
+
+
+            img {
+                width: 11rem;
+                height: 11rem;
+            }
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            svg:hover {
+                stroke-width: 10px;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+
+            h4 {
+                color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                font-size: 0.875rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 140%;
+                width: 16rem;
+
+                text-align: center;
+            }
+        }
 
 
 `;

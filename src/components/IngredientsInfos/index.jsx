@@ -1,9 +1,9 @@
 import { Container } from './styles'
 
-export function IngredientsInfos({ title, ...rest}) {
+export function IngredientsInfos({ data, ...rest}) {
     return (
         <Container {...rest}>
-            {title}
+            {data}
         </Container>
     )
 }

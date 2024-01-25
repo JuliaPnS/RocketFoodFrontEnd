@@ -36,7 +36,7 @@ export function MenuAdmin() {
     return (
         <Container>
             <div className="header">
-                <Link to='/admin'><PiX /></Link>
+                <Link to='/'><PiX /></Link>
                 <h1>Menu</h1>
             </div>
 
@@ -59,7 +59,7 @@ export function MenuAdmin() {
                 }
 
                 <Link to='/new'><h2>Novo Prato</h2></Link>
-                <Link to='/admin'><h2>Sair</h2></Link>
+                <Link to='/'><h2>Sair</h2></Link>
             </div>
 
             <Footer />

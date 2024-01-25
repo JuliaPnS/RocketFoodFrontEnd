@@ -15,6 +15,8 @@ export const Container = styled(Link)`
 
     padding: 0.75rem 2rem;
 
+    font-family: 'Poppins', sans-serif;
+
     display: flex;
     align-items: center;
     justify-content: center;

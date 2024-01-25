@@ -63,6 +63,7 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         gap: 0.95rem;
 
 
@@ -87,7 +88,7 @@ export const Container = styled.div`
             }
 
             h4 {
-                color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+                color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
                 font-weight: 400;
                 font-family: 'Roboto', sans-serif;
                 font-size: 0.875rem;

@@ -14,7 +14,6 @@ import { PlatesAdmin } from '../../components/PlatesAdmin';
 
 import Image from '../../assets/imgsubheader.png';
 
-
 export function HomeAdmin() {
     const [plates, setPlates] = useState([]);
 

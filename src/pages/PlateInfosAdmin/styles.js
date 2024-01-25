@@ -5,6 +5,7 @@ export const Container = styled.div`
 > a {    
         font-weight: 500;
         font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
         line-height: 140%;
 
         display: flex;
@@ -112,9 +113,8 @@ export const Container = styled.div`
 @media (min-width: 1024px) {
 
     > a {    
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 140%;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
 
         display: flex;
         align-items: center;

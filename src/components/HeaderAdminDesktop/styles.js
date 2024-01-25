@@ -50,8 +50,6 @@ export const Container = styled.div`
             margin-right: 0.5rem;
             width: 1.53;
             height: 1.53;
-
-
         }
     }
 
