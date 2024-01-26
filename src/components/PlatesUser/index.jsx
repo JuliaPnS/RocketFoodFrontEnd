@@ -1,5 +1,6 @@
 import { PiPlus, PiMinus } from 'react-icons/pi';
 
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 import { Container } from './styles';
 import { ButtonMin } from '../ButtonMin';
@@ -26,10 +27,10 @@ export function PlatesUser({ icon: Icon, image, data, ...rest }) {
 
                     <PiPlus />
                 </div>
-                <ButtonMin to='/plates' title='incluir' />
+                <ButtonMin to={`/platesdetails/${data.id}`} title='incluir' />
             </MediaQuery>
+
             <MediaQuery maxWidth={1439}>
-                <Link to='/platesadmin/:id'><PiPencilSimpleLight /></Link>
                 <img src={data.image} alt="Imagem do prato" />
                 <h3>{data.title}{" >"}</h3>
                 <p>R$ {data.price}</p>
@@ -41,7 +42,9 @@ export function PlatesUser({ icon: Icon, image, data, ...rest }) {
                     />
 
                     <PiPlus />
+                    
                 </div>
+                <ButtonMin to={`/platesdetails/${data.id}`} title='incluir'></ButtonMin>
 
             </MediaQuery>
 

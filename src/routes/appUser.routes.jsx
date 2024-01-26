@@ -9,7 +9,7 @@ export function AppUserRoutes() {
         <Routes>
             <Route path='/' element={<HomeUser />} />
             <Route path='/menu' element={<MenuUser />} />
-            <Route path='/plates/:id' element={<PlateInfosUser />} />
+            <Route path='/platesdetails/:id' element={<PlateInfosUser />} />
         </Routes>
     )
 }

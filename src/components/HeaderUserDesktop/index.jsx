@@ -16,15 +16,10 @@ export function HeaderUserDesktop({setPlates, plates}) {
     } 
     useEffect(() => {
         async function fetchPlates() {
-            if (search) {
+        
+            const response = await api.get(`/plates?search=${search}`);
 
-                const response = await api.get(`/plates?search=${search}`);
-
-                setPlates(response.data)
-
-            } else {
-                setPlates([])
-            }
+            setPlates(response.data)
         }
 
         fetchPlates()

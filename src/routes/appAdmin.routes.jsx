@@ -12,7 +12,7 @@ export function AppAdminRoutes() {
         <Routes>
             <Route path='/' element={<HomeAdmin />} />
             <Route path='/menuadmin' element={<MenuAdmin />} />
-            <Route path={'/platesadmin/:id'} element={<PlateInfosAdmin />} />
+            <Route path='/platesdetails/:id' element={<PlateInfosAdmin />} />
             <Route path='/new' element={<NewPlate />} />
             <Route path='/edit/:id' element={<EditPlate />} />
         </Routes>

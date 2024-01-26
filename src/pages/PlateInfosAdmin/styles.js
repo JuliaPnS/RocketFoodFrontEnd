@@ -99,6 +99,7 @@ export const Container = styled.div`
             .ingredientsInfos {
                 margin: 1rem;
                 display: flex;
+                justify-content: center;
 
                 flex-direction: row;
                 align-items: center;
@@ -137,6 +138,8 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
         
         margin: 1.5rem 7.62rem;
+        
+        display: flex;     
 
         img {
             width: 16.5rem;

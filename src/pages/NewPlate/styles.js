@@ -169,7 +169,7 @@ export const Container = styled.div`
 
     > .sectionOne {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
 
         .firstChild {
 

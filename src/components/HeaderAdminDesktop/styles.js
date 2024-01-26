@@ -23,6 +23,12 @@ export const Container = styled.div`
         margin-right: 0;
         width: 2rem;
         height: 2rem;
+    } 
+
+    svg:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
     }
 
     h1 {

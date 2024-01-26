@@ -61,6 +61,7 @@ export const Container = styled.div`
             align-content: center;
             flex-wrap: wrap;
             gap: 1.5rem;
+            justify-content: center;
             
 
 
@@ -101,7 +102,7 @@ export const Container = styled.div`
 
 }
 
-@media (widows: 320px) {
+@media (width: 320px) {
     .plateInfos {
         width: 19.75rem;
 

@@ -2,6 +2,7 @@ import { PiUploadSimple, PiX } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowDown } from 'react-icons/io';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -28,6 +29,10 @@ export function EditPlate() {
 
     const [ingredients, setIngredients] = useState([]);
     const [newIngredient, setNewIngredient] = useState("");
+
+    const [data, setData] = useState(null);
+
+    const { id } = useParams();
 
     const navigate = useNavigate();
 
@@ -67,7 +72,7 @@ export function EditPlate() {
                 <HeaderAdmin />
 
                 <div className="frame">
-                    <Link to='/platesadmin/:id'><p><IoIosArrowBack />voltar</p></Link>
+                    <Link to={`/platesdetails/${id}`}><p><IoIosArrowBack />voltar</p></Link>
                     <h1>Editar Prato</h1>
 
                     <label for="image">Imagem do Prato</label>
@@ -152,7 +157,7 @@ export function EditPlate() {
                 <HeaderAdminDesktop />
 
                 <div className="frame">
-                    <Link to='/platesadmin/:id'><p><IoIosArrowBack />voltar</p></Link>
+                    <Link to={`/platesdetails/${id}`}><p><IoIosArrowBack />voltar</p></Link>
 
                     <h1>Editar Prato</h1>
                     <div className="sectionOne">

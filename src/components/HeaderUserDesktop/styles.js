@@ -25,6 +25,12 @@ export const Container = styled.div`
         height: 2rem;
     }
 
+    svg:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
     h1 {
         font-weight: 700;
         font-size: 1.5rem;

@@ -20,7 +20,6 @@ export function HeaderAdminDesktop({ setPlates, plates }) {
             const response = await api.get(`/plates?search=${search}`);
 
             setPlates(response.data)
-            console.log(response.data)
         }
 
         fetchPlates()

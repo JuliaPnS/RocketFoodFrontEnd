@@ -1,9 +1,7 @@
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 import MediaQuery, { useMediaQuery } from 'react-responsive';
-
 import { useState, useEffect } from 'react';
-import { api } from '../../service/api';
 
 import { Container } from './styles';
 import { Footer } from '../../components/Footer';
@@ -74,7 +72,6 @@ export function HomeAdmin() {
                                         result[1].map(plate => (
                                             <PlatesAdmin
                                                 key={String(plate.id)}
-
                                                 data={plate}
 
 

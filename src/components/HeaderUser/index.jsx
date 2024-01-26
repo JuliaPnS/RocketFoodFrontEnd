@@ -2,7 +2,6 @@ import { Container } from './styles';
 import { PiReceiptLight, PiListLight  } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 
-
 export function HeaderUser() {
     return(
         <Container>

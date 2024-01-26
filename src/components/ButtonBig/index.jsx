@@ -6,7 +6,7 @@ export function Button({icon:Icon, data, title, ...rest }) {
         <Container type='button'  {...rest}>
             {Icon && <Icon />}
             {title}
-            {data && data.price}
+            {data}
                   
         </Container>
     );

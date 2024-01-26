@@ -162,12 +162,12 @@ export const Container = styled.div`
     }
 
     > .buttons .delete {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_800}; ;
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_800};
     }
 
     > .sectionOne {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
 
         .firstChild {
 

@@ -2,8 +2,9 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
+import { api } from '../../service/api';
 
 import { Container } from './styles';
 import { HeaderAdminDesktop } from '../../components/HeaderAdminDesktop';
@@ -11,69 +12,96 @@ import { HeaderAdmin } from '../../components/HeaderAdmin';
 import { Footer } from '../../components/Footer';
 import { Button } from '../../components/ButtonBig';
 import { IngredientsInfos } from '../../components/IngredientsInfos';
-import { PlatesAdmin } from '../../components/PlatesAdmin';
 
-
-import Image from '../../assets/plates/image1.png'
 
 export function PlateInfosAdmin() {
-    let { id } = useParams();
 
-    const [plates, setPlates] = useState([id]);
+    const [data, setData] = useState(null);
+
+    const { id } = useParams();
+
+    useEffect(() => {
+        async function fectShowPlate() {
+            const response = await api.get(`/plates/${id}`);
+            setData(response.data);
+        }
+
+        fectShowPlate();
+    }
+
+    )
 
     return (
         <Container>
             <MediaQuery minWidth={1440}>
                 <HeaderAdminDesktop />
                 <Link to='/'><IoIosArrowBack />voltar</Link>
-                <div className='plateInfosDesktop'>
-                    {
+                {
+                    data &&
+                    <div className='plateInfosDesktop'>
+
                         <div className="plate" >
 
-                            <img src={plates.image} alt="Imagem do prato" />
+                            <img src={data.image} alt="Imagem do prato" />
                             <section>
-                                <h1>cebola</h1>
-                                <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
+                                <h1>{data.title}</h1>
+                                <p>{data.description}</p>
+
 
                                 <div className='ingredientsInfosDesktop'>
-                                    
-                                    <IngredientsInfos title='cebola' />
-                                    <IngredientsInfos title='pão naan' />
-                                    <IngredientsInfos title='penino' />
-                                    <IngredientsInfos title='rabanate' />
-                                    <IngredientsInfos title='tomate' />
+                                    {
+                                        data.ingredients.map(ingredient => (
+                                            <IngredientsInfos
+                                                key={String(ingredient.id)}
+                                                data={ingredient.name} />
+                                        ))
+
+                                    }
                                 </div>
-                                <Button to='/edit/:id' title='Editar Prato' className='edit' />
+
+
+                                <Button to={`/edit/${id}`} title='Editar Prato' className='edit' />
                             </section>
-
                         </div>
+                    </div>
+                }
 
-                    }
-
-                </div>
 
 
             </MediaQuery>
-            <MediaQuery maxWidth={1024}>
+            <MediaQuery maxWidth={1439}>
                 <HeaderAdmin />
                 <Link to='/'><IoIosArrowBack />voltar</Link>
-                <div className='plateInfos'>
+                {
+                    data &&
+                    <div className='plateInfos'>
 
-                    <div className="plate">
-                        <img src={Image} alt="Imagem do prato" />
-                        <section>
-                            <h1>Salada Ravanello</h1>
-                            <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
+                        <div className="plate" >
 
-                            <div className='ingredientsInfos'>
-                                <IngredientsInfos data={name} />
+                            <img src={data.image} alt="Imagem do prato" />
+                            <section>
+                                <h1>{data.title}</h1>
+                                <p>{data.description}</p>
 
-                            </div>
-                            <Button to='/edit/:id' title='Editar Prato' className='edit' />
-                        </section>
 
+                                <div className='ingredientsInfos'>
+                                    {
+                                        data.ingredients.map(ingredient => (
+                                            <IngredientsInfos
+                                                key={String(ingredient.id)}
+                                                data={ingredient.name} />
+                                        ))
+
+                                    }
+                                </div>
+
+
+                                <Button to={`/edit/${id}`} title='Editar Prato' className='edit' />
+                            </section>
+                        </div>
                     </div>
-                </div>
+                }
+
             </MediaQuery>
 
             <Footer />

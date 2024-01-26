@@ -20,6 +20,7 @@ export const Container = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 0.34rem;
 
     > svg {
