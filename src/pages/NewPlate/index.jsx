@@ -151,9 +151,9 @@ export function NewPlate() {
                 <HeaderAdminDesktop />
 
                 <div className="frame">
-                    <Link to='/platesadmin/:id'><p><IoIosArrowBack />voltar</p></Link>
+                    <Link to='/'><p><IoIosArrowBack />voltar</p></Link>
 
-                    <h1>Editar Prato</h1>
+                    <h1>Novo Prato</h1>
                     <div className="sectionOne">
                         <div className="firstChild">
                             <label for="image">Imagem do Prato</label>
