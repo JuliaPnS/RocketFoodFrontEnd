@@ -182,7 +182,6 @@ export function NewPlate() {
                                 placeholder='Ex: Salada Ceasar'
                                 type='text'
                                 onChange={e => setTitle(e.target.value)}
-
                             />
                         </div>
                         <div className="thirdChild">
