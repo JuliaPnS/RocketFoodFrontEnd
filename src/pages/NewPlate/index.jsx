@@ -30,6 +30,19 @@ export function NewPlate() {
     const navigate = useNavigate();
 
     async function handleNewPlate() {
+
+        if (!image) {
+            return alert("Insira uma imagem!")
+        }
+
+        if (!title || !category || !description || !price) {
+            return alert("Preencha todos os campos!")
+        }
+
+        if(newIngredient) {
+            return alert("Lembre-se de adicionar o ingrediente!")
+        }
+
         const response = await api.post("/plates", {
             title,
             description,
@@ -47,7 +60,7 @@ export function NewPlate() {
         });
 
         alert("Prato criado com sucesso!");
-        navigate("/admin");
+        navigate("/");
     }
 
     function handleAddIngredient() {
@@ -142,7 +155,6 @@ export function NewPlate() {
                     <Button
                         onClick={handleNewPlate}
                         title='Salvar Alterações'
-                        to='/'
                     >
                     </Button>
                 </div>
@@ -151,9 +163,9 @@ export function NewPlate() {
                 <HeaderAdminDesktop />
 
                 <div className="frame">
-                    <Link to='/platesadmin/:id'><p><IoIosArrowBack />voltar</p></Link>
+                    <Link to='/'><p><IoIosArrowBack />voltar</p></Link>
 
-                    <h1>Editar Prato</h1>
+                    <h1>Novo Prato</h1>
                     <div className="sectionOne">
                         <div className="firstChild">
                             <label for="image">Imagem do Prato</label>
@@ -169,6 +181,8 @@ export function NewPlate() {
                                 id='name'
                                 placeholder='Ex: Salada Ceasar'
                                 type='text'
+                                onChange={e => setTitle(e.target.value)}
+
                             />
                         </div>
                         <div className="thirdChild">
@@ -216,6 +230,7 @@ export function NewPlate() {
                                 id='price'
                                 placeholder='R$0,00'
                                 type='text'
+                                onChange={e => setPrice(e.target.value)}
                             />
                         </div>
                     </div>
@@ -228,7 +243,7 @@ export function NewPlate() {
 
 
                     <div className="button">
-                        <Button to='/' title='Salvar Alterações' onClick={handleNewPlate} ></Button>
+                        <Button title='Salvar Alterações' onClick={handleNewPlate} ></Button>
                     </div>
 
 

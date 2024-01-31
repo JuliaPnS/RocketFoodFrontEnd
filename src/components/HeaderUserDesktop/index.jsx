@@ -1,4 +1,7 @@
 import { Container } from './styles';
+import { Input } from '../Input';
+import { Button } from '../ButtonBig';
+import { useAuth } from '../../hooks/auth';
 
 import { PiReceiptLight, PiMagnifyingGlassLight } from 'react-icons/pi';
 import { RxExit } from "react-icons/rx";
@@ -6,8 +9,6 @@ import { RxExit } from "react-icons/rx";
 import { useState, useEffect } from 'react';
 import { api } from '../../service/api';
 
-import { Input } from '../Input';
-import { Button } from '../ButtonBig';
 
 export function HeaderUserDesktop({setPlates, plates}) {
     const [search, setSearch] = useState("");
@@ -25,6 +26,9 @@ export function HeaderUserDesktop({setPlates, plates}) {
         fetchPlates()
 
     }, [search]);
+
+    const { signOut } = useAuth();
+
     return (
         <Container>
 
@@ -55,7 +59,7 @@ export function HeaderUserDesktop({setPlates, plates}) {
                 />
             </div>
 
-            <RxExit />
+            <RxExit onClick={signOut} />
         </Container>
     )
 }

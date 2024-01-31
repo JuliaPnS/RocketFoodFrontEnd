@@ -36,6 +36,15 @@ export function EditPlate() {
 
     const navigate = useNavigate();
 
+    async function handleRemove() {
+        const confirm = window.confirm("Deseja realmente excluir o prato?")
+
+        if(confirm) {
+            await api.delete(`/plates/${id}`);
+            navigate('/');
+        }
+    }
+
     async function handleEditPlate() {
         const response = await api.post("/plates", {
             title,
@@ -145,7 +154,7 @@ export function EditPlate() {
                     />
 
                     <div className="buttons">
-                        <Button to='/' className='delete' title='Excluir Prato' ></Button>
+                        <Button className='delete' title='Excluir Prato' onClick={handleRemove}></Button>
                         <Button to='/' title='Salvar Alterações' ></Button>
                     </div>
 
@@ -234,7 +243,7 @@ export function EditPlate() {
 
 
                     <div className="buttons">
-                        <Button to='/' className='delete' title='Excluir Prato' ></Button>
+                        <Button onClick={handleRemove} className='delete' title='Excluir Prato' ></Button>
                         <Button to='/' title='Salvar Alterações' onClick={handleEditPlate} ></Button>
                     </div>
 
