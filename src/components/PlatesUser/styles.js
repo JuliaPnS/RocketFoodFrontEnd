@@ -25,6 +25,13 @@ export const Container = styled.div`
         height: 5.5rem;
 
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+
+        cursor: pointer;
+    }
+
+    img:hover {
+        transform: scale(1.09);
+        transition: 0.3s;
     }
 
     h3 {
@@ -34,7 +41,12 @@ export const Container = styled.div`
         line-height: 1.5rem;
         color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
 
-    }  
+        cursor: pointer;
+    } 
+
+    h3:hover {
+        font-weight: 635;
+    }
     
     p {
         font-family: 'Roboto', sans-serif;
@@ -55,8 +67,9 @@ export const Container = styled.div`
 
     }
     svg:hover {
-        fill: ${({ theme }) => theme.COLORS.BUTTON_TOMATO_100};
         cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
     }
 
 
@@ -75,8 +88,6 @@ export const Container = styled.div`
             background: transparent;
 
             width: 1.5rem;
-
-            
         }
        
     }

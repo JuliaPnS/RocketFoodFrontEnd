@@ -72,6 +72,8 @@ export function NewPlate() {
         setIngredients(prevState => prevState.filter(ingredients => ingredients !== deleted));
     }
 
+    
+
     return (
         <Container>
             <MediaQuery maxWidth={1024}>
@@ -85,8 +87,10 @@ export function NewPlate() {
                     <div className="image">
                         <PiUploadSimple />
                         <input type="file" id="image" placeholder="Selecione Imagem"
-                            onChange={e => setImage(e.target.files[0])}></input>
-                        <p>Selecione Imagem</p>
+                            onChange={e => setImage(e.target.files[0])}>
+
+                        </input>
+                            <label for="image">Imagem do Prato</label>
                     </div>
 
                     <label htmlFor="name">Nome</label>
@@ -172,7 +176,7 @@ export function NewPlate() {
                             <div className="image">
                                 <PiUploadSimple />
                                 <input type="file" id="image" placeholder="Selecione Imagem" onChange={e => setImage(e.target.files[0])}></input>
-                                <p>Selecione imagem</p>
+                                    <label for="image">Imagem do Prato</label>
                             </div>
                         </div>
                         <div className="secondChild">
@@ -195,7 +199,6 @@ export function NewPlate() {
                                     <option value="bebidas">Bebidas</option>
                                     <option value="sobremesas">Sobremesas</option>
                                 </select>
-                                <IoIosArrowDown />
                             </div>
                         </div>
                     </div>

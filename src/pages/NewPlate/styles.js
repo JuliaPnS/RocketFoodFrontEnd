@@ -38,8 +38,6 @@ export const Container = styled.div`
 
             display: flex;
             align-items: start;
-
-
         }
 
         textarea {
@@ -171,7 +169,7 @@ export const Container = styled.div`
         display: flex;
         gap: 3rem;
 
-        .firstChild {
+        > .firstChild {
 
             > .image {
             background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_900};
@@ -188,23 +186,36 @@ export const Container = styled.div`
             
             padding: 0.75rem 2rem;
 
-            p {
+            label {
                 font-size: 0.875rem;
                 font-weight: 500;
+
+                margin: 0;
+                padding:0.2rem;
+
+                cursor: pointer;
             } 
             
             svg {
                 width: 1.2rem;
                 height: 1.2rem;
             }
-
-
+            
             input {
-                display: none;
                 width: 100%;
-                }
-                }
+                cursor: pointer;
+
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                border: none;
+                padding: none;
+                margin: none;
+                opacity: 0;
+            }
         }
+    }
 
         > .secondChild {
             width: 27.18rem;
@@ -235,6 +246,7 @@ export const Container = styled.div`
             width: 100%;
 
             padding: 1rem;
+            margin-right: 1rem;
             background: transparent;
 
 
@@ -243,9 +255,9 @@ export const Container = styled.div`
             color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
             font-size: 0.875rem;
 
-  
+            cursor: pointer;
 
-            -webkit-appearance: none;
+
         }
     }
         }
