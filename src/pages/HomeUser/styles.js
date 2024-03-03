@@ -140,14 +140,14 @@ export const Container = styled.div`
                 }
             }
 
-            .frameDesktop {
+            > .frameDesktop {
                 margin: 0 7.75rem;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
 
 
-                > .sectionOne, .sectionTwo, .sectionThree {
+                > .sections {
                     position: relative;
 
                     svg:hover {

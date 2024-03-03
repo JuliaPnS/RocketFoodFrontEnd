@@ -1,15 +1,16 @@
 import { Container } from './styles';
 import { PiListLight } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
+
 import { useState, useEffect } from 'react';
 import { api } from '../../service/api';
-
 
 
 export function HeaderAdmin({ setPlates, plates }) {
     if (!setPlates) {
         [plates, setPlates] = useState([]);
     }
+
     useEffect(() => {
         async function fetchPlates() {
 
@@ -20,7 +21,6 @@ export function HeaderAdmin({ setPlates, plates }) {
 
         fetchPlates()
     }, []);
-
 
     return (
         <Container>

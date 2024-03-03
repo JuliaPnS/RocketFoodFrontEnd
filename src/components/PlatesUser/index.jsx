@@ -41,9 +41,8 @@ export function PlatesUser({ icon: Icon, image, data, ...rest }) {
 
             <MediaQuery maxWidth={1439}>
                 <PiHeart />
-
-                <img src={data.image} alt="Imagem do prato" to={`/platesdetails/${data.id}`} />
-                <h3 to={`/platesdetails/${data.id}`} >{data.title}{" >"} </h3>
+                <img src={data.image} alt="Imagem do prato" onClick={handleClick} />
+                <h3 onClick={handleClick} >{data.title}{" >"} </h3>
                 <p>R${data.price}</p>
                 <div className="input">
                     <PiMinus />
@@ -51,9 +50,7 @@ export function PlatesUser({ icon: Icon, image, data, ...rest }) {
                         type='number'
                         placeholder='01'
                     />
-
                     <PiPlus />
-
                 </div>
                 <ButtonMin to={`/platesdetails/${data.id}`} title='incluir'></ButtonMin>
 

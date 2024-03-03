@@ -55,7 +55,7 @@ export function HomeUser() {
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={1439}>
-                <HeaderUser />
+                <HeaderUser setPlates={setPlates} plates={plates} />
                 <div className='subHeader'>
                     <img src={Image} alt="Imagem macarons" />
 
@@ -64,7 +64,7 @@ export function HomeUser() {
                         <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                     </section>
                 </div>
-                <div className="frameDesktop">
+                <div className="frameMobile">
                     {
                         Array.from(Map.groupBy(plates, (plate) => plate.category)).map((result) => {
                             return <div className="sections">
