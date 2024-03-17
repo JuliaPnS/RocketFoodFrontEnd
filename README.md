@@ -67,6 +67,9 @@ Usuário Admin
 Login: noah@gmail.com 
 Senha: 123
 
+## Observações
+Caso for rodar o projeto localmente, lembre-se de atualizar a URL de produção para a URL local - RocketFood\src\service\api.js
+
 ## Melhorias
 No futuro, será feito refatorações e acréscimo de novas funcionalidades, como:
 - Adicionar número de pratos
