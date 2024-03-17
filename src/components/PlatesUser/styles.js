@@ -161,6 +161,15 @@ export const Container = styled.div`
 
                 text-align: center;
             }
+
+            .input {    
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            
+            }
+
         }
 
 

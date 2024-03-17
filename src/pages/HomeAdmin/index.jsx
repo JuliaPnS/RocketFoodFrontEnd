@@ -12,8 +12,46 @@ import { PlatesAdmin } from '../../components/PlatesAdmin';
 
 import Image from '../../assets/imgsubheader.png';
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 export function HomeAdmin() {
     const [plates, setPlates] = useState([]);
+
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 3
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
+    const CustomRightArrow = ({ onClick, ...rest }) => {
+        const {
+          onMove,
+          carouselState: { currentSlide, deviceType }
+        } = rest;
+        return <button onClick={() => onClick()} id='arrowForward' className='arrow'> <IoIosArrowForward /></button>;
+      };
+
+      const CustomLeftArrow = ({ onClick, ...rest }) => {
+        const {
+          onMove,
+          carouselState: { currentSlide, deviceType }
+        } = rest;
+        return <button onClick={() => onClick()} id='arrowBack' className='arrow'> <IoIosArrowBack /></button>;
+      };
 
     return (
 
@@ -29,24 +67,29 @@ export function HomeAdmin() {
                     </section>
                 </div>
 
-                <div className="frameDesktop">
+                <div className="frame">
                     {
                         Array.from(Map.groupBy(plates, (plate) => plate.category)).map((result) => {
-                            return <div className="sections">
-                                <Section title={result[0]}>
-                                    <IoIosArrowBack id='arrowBack' className='arrow' />
-                                    {
-                                        result[1].map(plate => (
-                                            <PlatesAdmin
-                                                key={String(plate.id)}
-                                                data={plate}
-                                            />
-                                        ))
-                                    }
+                            return (
 
-                                    <IoIosArrowForward id='arrowForward' className='arrow' />
-                                </Section>
-                            </div>
+                                <div className="sections">
+                                    <Section title={result[0]}>
+                                        <Carousel centerMode removeArrowOnDeviceType="mobile" responsive={responsive} containerClass="plates" customRightArrow={<CustomRightArrow />} customLeftArrow={<CustomLeftArrow />}>
+                                           
+                                            {
+                                                result[1].map(plate => (
+                                                    <PlatesAdmin
+                                                        key={String(plate.id)}
+                                                        data={plate}
+                                                    />
+                                                ))
+                                            }
+                                        </Carousel>
+                                    </Section>
+                                </div>
+
+                            )
+
                         })
                     }
                 </div>
@@ -62,26 +105,28 @@ export function HomeAdmin() {
                     </section>
                 </div>
 
-                <div className="frameDesktop">
+                <div className="frame">
                     {
                         Array.from(Map.groupBy(plates, (plate) => plate.category)).map((result) => {
-                            return <div className="sections">
-                                <Section title={result[0]}>
-                                    <IoIosArrowBack id='arrowBack' className='arrow' />
-                                    {
-                                        result[1].map(plate => (
-                                            <PlatesAdmin
-                                                key={String(plate.id)}
-                                                data={plate}
+                            return (
 
+                                <div className="sections">
+                                    <Section title={result[0]}>
+                                        <Carousel centerMode dragEnabled removeArrowOnDeviceType="mobile" responsive={responsive} containerClass="plates" customRightArrow={<CustomRightArrow />} customLeftArrow={<CustomLeftArrow />}>
+                                           
+                                            {
+                                                result[1].map(plate => (
+                                                    <PlatesAdmin
+                                                        key={String(plate.id)}
+                                                        data={plate}
+                                                    />
+                                                ))
+                                            }
+                                        </Carousel>
+                                    </Section>
+                                </div>
 
-                                            />
-                                        ))
-                                    }
-
-                                    <IoIosArrowForward id='arrowForward' className='arrow' />
-                                </Section>
-                            </div>
+                            )
                         })
                     }
                 </div>

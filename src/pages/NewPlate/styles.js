@@ -38,6 +38,7 @@ export const Container = styled.div`
 
             display: flex;
             align-items: start;
+
         }
 
         textarea {
@@ -76,6 +77,10 @@ export const Container = styled.div`
 
             a {
                 font-size: 0.87rem;
+            }
+
+            label {
+                margin-top: 0.5rem;
             }
         
 
@@ -308,5 +313,35 @@ export const Container = styled.div`
         }
     }
         
+}
+
+@media (max-width: 1024px) {
+    
+    > .buttons {
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+
+            width: 8.43rem;
+
+        }
+
+        .frame {
+            .ingredients {
+   
+            .tagsIngredients {
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                padding: 1.4rem 1.4rem 1.4rem 1.4rem;
+       
+            }
+        }
+    }
 }
 `;

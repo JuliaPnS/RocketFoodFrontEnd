@@ -27,9 +27,8 @@ export function PlateInfosAdmin() {
         }
 
         fectShowPlate();
-    }
+    }, []);
 
-    )
 
     return (
         <Container>

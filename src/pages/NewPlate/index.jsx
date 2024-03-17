@@ -86,9 +86,7 @@ export function NewPlate() {
                     <label htmlFor="image">Imagem do Prato</label>
                     <div className="image">
                         <PiUploadSimple />
-                        <input type="file" id="image" placeholder="Selecione Imagem"
-                            onChange={e => setImage(e.target.files[0])}>
-
+                        <input type="file" id="image" placeholder="Selecione Imagem" onChange={e => setImage(e.target.files[0])}>
                         </input>
                             <label for="image">Imagem do Prato</label>
                     </div>

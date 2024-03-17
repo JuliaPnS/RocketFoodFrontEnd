@@ -34,4 +34,9 @@ export const Container = styled(Link)`
         
     }
 
+@media(max-width: 375px) {
+    padding: 0.75rem 1rem;
+
+}
+
 `;

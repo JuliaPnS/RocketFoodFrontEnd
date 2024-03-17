@@ -35,8 +35,9 @@ export function PlatesUser({ icon: Icon, image, data, ...rest }) {
                     />
 
                     <PiPlus />
+                    <ButtonMin to={`/platesdetails/${data.id}`} title='incluir' />
                 </div>
-                <ButtonMin to={`/platesdetails/${data.id}`} title='incluir' />
+                
             </MediaQuery>
 
             <MediaQuery maxWidth={1439}>

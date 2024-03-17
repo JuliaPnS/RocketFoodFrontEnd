@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
+
        > .subHeaderDesktop {
             position: relative;
 
@@ -17,6 +18,7 @@ export const Container = styled.div`
 
                height: 19rem;
             }
+            
 
             section {
                 width: 100%;
@@ -55,6 +57,8 @@ export const Container = styled.div`
 
             }
        }
+
+
        
        @media (min-width: 320px) {
             > .subHeader {
@@ -133,23 +137,60 @@ export const Container = styled.div`
             }
         }
 
-        @media (min-width: 768px) {
+        @media (width: 375px) {
+            > .subHeader {
+                section {
+                    padding-top: 1.6rem;
+                    padding-left: 7.4rem;
+                }
+            }
+        }
+
+        @media (min-width: 690px) {
+
+            #arrowForward {
+                right: .1rem;
+                z-index: 1;
+            }
+
+            #arrowBack {
+                left: 1.7rem;
+                z-index: 1;
+            }
+    
+            .arrow {
+                position: absolute;
+
+                background-color: transparent;
+                border: none;
+                
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+
+                    color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+                }
+            }
+
+            .plates {
+                width: 75.9rem;
+                margin: 0 auto;
+            
+            }
+
             > .subHeaderDesktop {
                 section {
                     margin: 0 7.75rem;
                 }
             }
 
-            > .frameDesktop {
-                margin: 0 7.75rem;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
+            > .frame {
 
-
-                > .sections {
-                    position: relative;
-
+                .carousel {
+                    margin: 0 35.75rem;
+                    display: flex;
+                    align-items: center;
+    
                     svg:hover {
                         cursor: pointer;
                         transform: scale(1.1);
@@ -157,26 +198,29 @@ export const Container = styled.div`
                     }
 
                    
-                    .arrow {
-                        color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
-                        width: 1.5rem;
-                        height: 1.5rem;
-                        position: absolute;
-                         
-                    }
-
-                    #arrowForward {
-                        right: .1rem;
-                        z-index: 1;
-                    }
-
-                    #arrowBack {
-                        left: 1.7rem;
-                        z-index: 1;
-                    }
+                   
                 }
             }
-           
+
+         
         }
 
+        @media (width: 768px) { 
+            .plates {
+                width: 45rem;
+                margin: 0 auto;
+            
+            }
+            .arrow {
+                svg {
+                    width: 1.2rem;
+                    height: 1.2rem;
+
+                    color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_300};
+                }
+            }
+            
+        
+        }
+    
 `;

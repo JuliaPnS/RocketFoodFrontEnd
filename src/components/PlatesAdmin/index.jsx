@@ -19,7 +19,7 @@ export function PlatesAdmin({ data, image, ...rest }) {
         <Container {...rest}>
             <MediaQuery minWidth={1440}>
                 <Link to={`/platesdetails/${data.id}`}><PiPencilSimpleLight /></Link>
-                <img src={data.image} alt="Imagem do prato" />
+                <img src={data.image} alt="Imagem do prato" onClick={handleClick}/>
                 
                 <h3 onClick={handleClick}>{data.title}{" >"}</h3>
                 <h4>{data.description}</h4>
@@ -30,7 +30,7 @@ export function PlatesAdmin({ data, image, ...rest }) {
 
             <MediaQuery maxWidth={1439}>
                 <Link to={`/platesdetails/${data.id}`}><PiPencilSimpleLight /></Link>
-                <img src={data.image} alt="Imagem do prato" />
+                <img src={data.image} alt="Imagem do prato" onClick={handleClick}/>
                 <h3 onClick={handleClick}>{data.title}{" >"}</h3>
                 <p>R$ {data.price}</p>
 

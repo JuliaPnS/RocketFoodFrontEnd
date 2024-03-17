@@ -57,6 +57,18 @@ export const Container = styled.div`
                 display: none;
                 width: 100%;
                 }
+
+            a {
+                font-size: 0.87rem;
+            }
+
+            
+            label {
+                margin-top: 0.5rem;
+            }
+
+
+        
         }
         
 
@@ -90,7 +102,9 @@ export const Container = styled.div`
             color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
             font-size: 0.875rem;
 
-  
+            option {
+                color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_900};
+            }
 
             -webkit-appearance: none;
         }
@@ -106,7 +120,6 @@ export const Container = styled.div`
 
             display: flex;
             align-items: start;
-
 
         }
 
@@ -151,7 +164,6 @@ export const Container = styled.div`
             text-align: center;
 
             width: 10.75rem;
-     
             
             .delete {
                 width: 8.43rem;
@@ -186,6 +198,17 @@ export const Container = styled.div`
             
             padding: 0.75rem 2rem;
 
+            label {
+                font-size: 0.875rem;
+                font-weight: 500;
+
+                margin: 0;
+                padding:0.2rem;
+
+                cursor: pointer;
+            } 
+            
+
             p {
                 font-size: 0.875rem;
                 font-weight: 500;
@@ -201,7 +224,7 @@ export const Container = styled.div`
                 display: none;
                 width: 100%;
                 }
-                }
+            }
         }
 
         > .secondChild {
@@ -230,25 +253,24 @@ export const Container = styled.div`
             }
 
             select {
-            width: 100%;
+                width: 100%;
 
-            padding: 1rem;
-            background: transparent;
+                padding: 1rem;
+                background: transparent;
 
 
-            border: none;
+                border: none;
 
-            color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
-            font-size: 0.875rem;
+                color: ${({ theme }) => theme.COLORS.COLOR_LIGHT_WHITE_400};
+                font-size: 0.875rem;
 
-  
+    
 
-            -webkit-appearance: none;
+                -webkit-appearance: none;
+            }
         }
     }
-        }
-        
-    }
+}
 
     > .sectionTwo {
         display: flex;
@@ -291,6 +313,37 @@ export const Container = styled.div`
 
         h1 {
             margin: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    > .buttons {
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+
+            width: 8.43rem;
+
+        }
+
+        .frame {
+            .ingredients {
+   
+            .tagsIngredients {
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content:center;
+
+                align-items: center;
+
+                padding: 1.4rem 1.4rem 1.4rem 1.4rem;
+       
+            }
         }
     }
 }
