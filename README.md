@@ -64,7 +64,7 @@ Login: anajulia@gmail.com
 Senha: 123
 
 Usuário Admin 
-Login: noah.camargo@gmail.com 
+Login: noah@gmail.com 
 Senha: 123
 
 ## Melhorias
@@ -116,14 +116,6 @@ As melhorias serão feitas na seguinte ordem:
 | Cor 2             | ![#AB4D55](https://via.placeholder.com/10/AB4D55?text=+) #AB4D55 |
 | Cor 3             | ![#76797B](https://via.placeholder.com/10/76797B?text=+) #76797B |
 
-
-
-## Screenshots
-![App Screenshot](https://via.placeholder.com/468x300?text=RocketFood\Prints\print1.png)
-
-![App Screenshot](https://via.placeholder.com/468x300?text=RocketFood\Prints\print2.png)
-
-![App Screenshot](https://via.placeholder.com/468x300?text=RocketFood\Prints\print3.png)
 
 ## Autores
 - [@JuliaPnS](https://github.com/JuliaPnS)
