@@ -53,6 +53,9 @@ Inicie o aplicativo
   npm run dev
 ```
 
+## Observações
+Lembre-se de atualizar a URL de produção para a URL local - RocketFood\src\service\api.js
+
 ## O Deploy
 Foi feito no https://app.netlify.com/
 
@@ -61,14 +64,11 @@ Entre: https://main--majestic-tarsier-fa2f7a.netlify.app/
 
 Usuário Comum 
 Login: anajulia@gmail.com 
-Senha: 123
+Senha: 123456
 
 Usuário Admin 
 Login: noah@gmail.com 
-Senha: 123
-
-## Observações
-Caso for rodar o projeto localmente, lembre-se de atualizar a URL de produção para a URL local - RocketFood\src\service\api.js
+Senha: 123456
 
 ## Melhorias
 No futuro, será feito refatorações e acréscimo de novas funcionalidades, como:
