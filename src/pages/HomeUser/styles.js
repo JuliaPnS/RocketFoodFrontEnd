@@ -175,6 +175,7 @@ export const Container = styled.div`
             .plates {
                 width: 75.9rem;
                 margin: 0 auto;
+                justify-content: center;
             
             }
 
