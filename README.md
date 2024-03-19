@@ -45,6 +45,7 @@ Instale as dependências
     react-router-dom
     style-components
     vite
+    react-multi-carousel
 ```
 
 Inicie o aplicativo
