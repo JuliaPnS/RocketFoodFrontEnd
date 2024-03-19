@@ -5,7 +5,7 @@ O RocketFood é um aplicativo de entrega de comida. Permite que o usuário encon
 
 ## Stack utilizada
 
-**Front-end:** React, Vite, JavaScript
+**Front-end:** `React`, `Vite`, `JavaScript`
 
 ## Funcionalidades
 - Visualização de detalhes do prato
@@ -70,8 +70,8 @@ Usuário Admin
 Login: noah@gmail.com 
 Senha: 123456
 
-* obs: por ser site gratuito, a requisição pode demorar! 
-** os slides funcionam apenas quando tem mais de 3 pratos
+_obs: por ser site gratuito, a requisição pode demorar! 
+os slides funcionam apenas quando tem mais de 3 pratos_
 
 
 ## Melhorias
