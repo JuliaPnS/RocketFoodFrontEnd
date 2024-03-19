@@ -70,7 +70,9 @@ Usuário Admin
 Login: noah@gmail.com 
 Senha: 123456
 
-obs: por ser site gratuito, a requisição pode demorar
+* obs: por ser site gratuito, a requisição pode demorar! 
+** os slides funcionam apenas quando tem mais de 3 pratos
+
 
 ## Melhorias
 No futuro, será feito refatorações e acréscimo de novas funcionalidades, como:
