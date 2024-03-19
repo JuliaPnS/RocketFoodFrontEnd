@@ -95,9 +95,16 @@ As melhorias serão feitas na seguinte ordem:
 - Busca por nome do prato ou ingrediente nas demais telas
 
 ## Images
+
+![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/f805e9a9-186e-4265-827f-66f44047857c)
+
+![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/eb2927b3-4939-4e4b-a15a-a56c64047461)
+
 ![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/9478007d-2634-4474-9100-3bbd52dff51f)
 
 ![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/9b1f2b79-89e3-4b76-8db0-f57578b2ab95)
+
+![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/35453f1a-bc9a-4f0d-b9af-36afa8624af1)
 
 
 
