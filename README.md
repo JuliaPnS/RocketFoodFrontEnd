@@ -104,7 +104,8 @@ As melhorias serão feitas na seguinte ordem:
 
 ![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/9b1f2b79-89e3-4b76-8db0-f57578b2ab95)
 
-![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/35453f1a-bc9a-4f0d-b9af-36afa8624af1)
+![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/c9e974f4-0a0e-499a-bc33-1e8d7b5a3fb9)
+
 
 
 
