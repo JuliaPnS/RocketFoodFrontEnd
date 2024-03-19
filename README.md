@@ -70,6 +70,8 @@ Usuário Admin
 Login: noah@gmail.com 
 Senha: 123456
 
+obs: por ser site gratuito, a requisição pode demorar
+
 ## Melhorias
 No futuro, será feito refatorações e acréscimo de novas funcionalidades, como:
 - Adicionar número de pratos
@@ -88,6 +90,13 @@ As melhorias serão feitas na seguinte ordem:
 - Adicionar número de pratos pelo input
 - Fazer pedido
 - Busca por nome do prato ou ingrediente nas demais telas
+
+## Images
+![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/9478007d-2634-4474-9100-3bbd52dff51f)
+
+![image](https://github.com/JuliaPnS/RocketFoodFrontEnd/assets/66971019/9b1f2b79-89e3-4b76-8db0-f57578b2ab95)
+
+
 
   
 ## Documentação de cores
